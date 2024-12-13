@@ -2,7 +2,7 @@
 
 ### Education
 Computing and Information Sciences, PhD
-Rochester Institute of Technology
+-Rochester Institute of Technology
 
 ### Experience
 Graduate Reasearch and Teaching Assistant
