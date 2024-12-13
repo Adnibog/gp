@@ -9,7 +9,7 @@ Graduate Reasearch and Teaching Assistant
 - Exploring Microarchitecture Timing Attack Vectors
 - Side Channel Analysis
 
-###Projects
+### Projects
 Trek Monitoring System
 RFID-based EHR Management System
 Agrobot: A multifunctional Robot
