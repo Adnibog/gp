@@ -1,6 +1,6 @@
 # Gobinda Pandey
 
-**Cybersecurity Researcher | Ph.D. Candidate in Computing & Information Sciences**
+**Cybersecurity Researcher | Ph.D. Student in Computing & Information Sciences**
 
 - 📍 **Location**: Rochester, NY, USA  
 - 📧 **Email**: [gp8479@g.rit.edu](mailto:gp8479@g.rit.edu)  
