@@ -19,7 +19,7 @@ const Home = () => {
         <div className="home">
             <section className="hero">
                 <div className="hero-content">
-                    <img src={process.env.PUBLIC_URL + "/pp.jpg"} alt="Gobinda Pandey" className="profile-photo" />
+                    <img src={`${process.env.PUBLIC_URL}/pp.jpg`} alt="Gobinda Pandey" className="profile-photo" />
                     <h1>Gobinda Pandey</h1>
                     <h2>PhD in Computing and Information Sciences</h2>
                     <p>Exploring Secure Technologies for a Better Tomorrow.</p>
@@ -29,7 +29,7 @@ const Home = () => {
             <section className="cv section">
                 <h2>Curriculum Vitae</h2>
                 <iframe 
-                    src={process.env.PUBLIC_URL + "/Adnibog_CV.pdf"} 
+                    src={`${process.env.PUBLIC_URL}/Adnibog_CV.pdf`} 
                     width="100%" 
                     height="600px" 
                     style={{ border: 'none' }}
