@@ -2,10 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://Adnibog.github.io/gp",
+  "homepage": "https://adnibog.github.io/",
   "scripts": {
     "start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-    "build": "react-scripts build",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
