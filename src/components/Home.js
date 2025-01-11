@@ -28,7 +28,7 @@ const Home = () => {
             </section>
             <section className="cv section">
                 <h2>Curriculum Vitae</h2>
-                <a href={process.env.PUBLIC_URL + "/cv.pdf"} target="_blank" rel="noopener noreferrer" className="cv-link">View CV</a>
+                <a href={process.env.PUBLIC_URL + "/Adnibog_CV.pdf"} target="_blank" rel="noopener noreferrer" className="cv-link">View CV</a>
             </section>
             <section className="skills section">
                 <h2>Skills</h2>
