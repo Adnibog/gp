@@ -1,4 +1,3 @@
-// filepath: /home/gobinda/gp/portfolio/src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -14,7 +13,7 @@ import './styles.css';
 
 function App() {
     return (
-        <Router>
+        <Router basename="/gp">
             <div className="App">
                 <Navbar />
                 <Switch>
