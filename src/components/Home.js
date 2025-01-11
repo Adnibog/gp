@@ -1,16 +1,17 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import '../styles.css';
 
 const Home = () => {
     return (
         <div className="home">
             <div className="hero">
                 <div className="hero-content">
+                    <img src="/pp.jpg" alt="Gobinda Pandey" className="profile-photo" />
                     <h1>Gobinda Pandey</h1>
                     <h2>PhD Student in Computing and Information Sciences</h2>
                     <p>Exploring Secure Technologies for a Better Tomorrow.</p>
-                    <img src="/pp.jpg" alt="Profile" className="profile-photo" />
                 </div>
             </div>
             <nav className="quick-links">
