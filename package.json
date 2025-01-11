@@ -7,7 +7,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "portfolio",
@@ -20,12 +22,14 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
     "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
     "react-spring": "^9.4.4"
   },
-  "devDependencies": {},
-  "homepage": "https://your-deployed-url.com",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  },
+  "homepage": "https://Adnibog.github.io/gp",
   "browserslist": {
     "production": [
       ">0.2%",
