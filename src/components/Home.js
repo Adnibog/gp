@@ -28,7 +28,13 @@ const Home = () => {
             </section>
             <section className="cv section">
                 <h2>Curriculum Vitae</h2>
-                <a href={process.env.PUBLIC_URL + "/Adnibog_CV .pdf"} target="_blank" rel="noopener noreferrer" className="cv-link">View CV</a>
+                <iframe 
+                    src={process.env.PUBLIC_URL + "/Adnibog_CV.pdf"} 
+                    width="100%" 
+                    height="600px" 
+                    style={{ border: 'none' }}
+                    title="Curriculum Vitae"
+                ></iframe>
             </section>
             <section className="skills section">
                 <h2>Skills</h2>
