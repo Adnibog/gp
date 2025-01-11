@@ -2,32 +2,6 @@
 
 This is a professional academic portfolio for Gobinda Pandey, a PhD student in Computing and Information Sciences. It showcases Gobinda's research interests, publications, certifications, and projects.
 
-## Project Structure
-
-```
-portfolio
-├── public
-│   ├── index.html
-│   ├── pp.jpg
-├── src
-│   ├── components
-│   │   ├── About.js
-│   │   ├── Contact.js
-│   │   ├── Certifications.js
-│   │   ├── Home.js
-│   │   ├── Navbar.js
-│   │   ├── Projects.js
-│   │   ├── Publications.js
-│   │   └── ResearchInterests.js
-│   ├── App.js
-│   ├── index.js
-│   ├── App.css
-│   └── index.css
-├── package.json
-├── README.md
-└── .gitignore
-```
-
 ## Getting Started
 
 ### Prerequisites
@@ -84,4 +58,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Gobinda Pandey - [gobindapandey223@gmail.com](mailto:gobindapandey223@gmail.com)
 
-Project Link: [https://github.com/Adnibog/gp.git](https://github.com/Adnibog/gp.git)
+Project Link: [https://github.com/Adnibog/gp](https://github.com/Adnibog/gp)
