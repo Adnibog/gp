@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -25,7 +25,6 @@ function App() {
                     <Route path="/certifications" component={Certifications} />
                     <Route path="/projects" component={Projects} />
                     <Route path="/contact" component={Contact} />
-                    <Redirect to="/" />
                 </Switch>
                 <Footer />
             </div>
