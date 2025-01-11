@@ -24,17 +24,8 @@ const Home = () => {
                     <h2>PhD in Computing and Information Sciences</h2>
                     <p>Exploring Secure Technologies for a Better Tomorrow.</p>
                     <p>With a strong background in electronics, communication, and information, and a passion for cybersecurity, I am dedicated to advancing the field through innovative research and practical applications.</p>
+                    <a href={`${process.env.PUBLIC_URL}/Adnibog_CV.pdf`} className="cv-link" target="_blank" rel="noopener noreferrer">View CV</a>
                 </div>
-            </section>
-            <section className="cv section">
-                <h2>Curriculum Vitae</h2>
-                <iframe 
-                    src={`${process.env.PUBLIC_URL}/Adnibog_CV.pdf`} 
-                    width="100%" 
-                    height="600px" 
-                    style={{ border: 'none' }}
-                    title="Curriculum Vitae"
-                ></iframe>
             </section>
             <section className="skills section">
                 <h2>Skills</h2>

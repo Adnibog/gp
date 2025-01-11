@@ -340,7 +340,7 @@ footer {
 /* Publications */
 .publications {
     padding: 20px;
-    background: #e0f2f1; /* Light green background */
+    background: #004d40; /* Light green background */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -487,6 +487,10 @@ footer {
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px; /* Increase the height of the message field */
 }
 
 .contact-form input::placeholder,
