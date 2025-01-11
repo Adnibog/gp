@@ -1,4 +1,4 @@
-
+/* General styles */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -16,6 +16,7 @@ h1, h2, h3 {
     padding: 20px;
 }
 
+/* Hero section */
 .hero {
     background: linear-gradient(to right, #6a11cb, #2575fc);
     color: white;
@@ -28,6 +29,7 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 
+/* Profile photo */
 .profile-photo {
     width: 150px;
     height: 150px;
@@ -35,8 +37,10 @@ h1, h2, h3 {
     margin-top: 20px;
 }
 
+/* Quick links */
 .quick-links {
     margin-top: 20px;
+    text-align: center;
 }
 
 .quick-links a {
@@ -50,6 +54,7 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: center;
@@ -67,6 +72,7 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
+/* Footer */
 .footer {
     background: #333;
     color: white;
@@ -77,13 +83,18 @@ h1, h2, h3 {
     bottom: 0;
 }
 
-.projects {
+/* Projects section */
+.projects-container {
+    padding: 20px;
+}
+
+.projects-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.project {
+.project-card {
     background: white;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -91,13 +102,205 @@ h1, h2, h3 {
     padding: 20px;
     width: 300px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.project a {
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.project-card a {
     color: #007bff;
     text-decoration: none;
 }
 
-.project a:hover {
+.project-card a:hover {
     text-decoration: underline;
 }
+
+/* Certifications section */
+.certifications {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.certification {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.certification img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Contact section */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+.contact-container {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.contact-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form .form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-form .submit-button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-form .submit-button:hover {
+    background: #0056b3;
+}
+
+.contact-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-details h3 {
+    color: #333;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.contact-details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 20px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .quick-links a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .footer {
+        position: static;
+        padding: 20px 0;
+    }
+
+    .projects-grid, .certifications {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card, .certification {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+

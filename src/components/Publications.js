@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const publications = [
     {
@@ -19,21 +20,34 @@ const publications = [
     // Add more publications as needed
 ];
 
-const Publications = () => {
-    return (
-        <div className="publications">
-            <h2>Publications</h2>
-            <ul>
-                {publications.map((pub, index) => (
-                    <li key={index}>
-                        <a href={pub.link} target="_blank" rel="noopener noreferrer">
-                            {pub.title}
-                        </a> - {pub.journal}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+const PublicationItem = ({ title, journal, link }) => (
+    <li>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+            {title}
+        </a> - {journal}
+    </li>
+);
+
+PublicationItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    journal: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
 };
+
+const Publications = () => (
+    <div className="publications">
+        <h2>Publications</h2>
+        <ul>
+            {publications.map((pub, index) => (
+                <PublicationItem
+                    key={index}
+                    title={pub.title}
+                    journal={pub.journal}
+                    link={pub.link}
+                />
+            ))}
+        </ul>
+    </div>
+);
 
 export default Publications;

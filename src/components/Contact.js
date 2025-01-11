@@ -1,4 +1,9 @@
+// filepath: /home/gobinda/gp/portfolio/src/components/Contact.js
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import '../styles.css'; // Correct import path
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -25,7 +30,7 @@ const Contact = () => {
     return (
         <div className="contact-container">
             <h2>Contact Me</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
                     <input
@@ -56,23 +61,26 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                    />
+                    ></textarea>
                 </div>
-                <button type="submit">Send Message</button>
+                <button type="submit" className="submit-button">Send</button>
             </form>
             <div className="contact-details">
                 <h3>Contact Details</h3>
                 <p>
-                    <i className="fa fa-phone"></i> (+1)-585-290-2209
+                    <FontAwesomeIcon icon={faPhone} /> (+1)-585-290-2209
                 </p>
                 <p>
-                    <i className="fa fa-envelope"></i> <a href="mailto:gp8479@g.rit.edu">gp8479@g.rit.edu</a>
+                    <FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:gp8479@g.rit.edu">gp8479@g.rit.edu</a>
                 </p>
                 <p>
-                    <i className="fa fa-map-marker"></i> Rochester, NY, USA
+                    <FontAwesomeIcon icon={faMapMarkerAlt} /> Rochester, NY, USA
                 </p>
                 <p>
-                    <i className="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/gobinda-pandey-6b8127185/">gobinda-pandey</a>
+                    <FontAwesomeIcon icon={faLinkedin} /> <a href="https://www.linkedin.com/in/gobinda-pandey-6b8127185/">gobinda-pandey</a>
+                </p>
+                <p>
+                    <FontAwesomeIcon icon={faGithub} /> <a href="https://github.com/Adnibog">Adnibog</a>
                 </p>
             </div>
         </div>
