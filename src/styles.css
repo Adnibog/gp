@@ -16,6 +16,23 @@ html, body {
     margin: 0;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.App {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.home {
+    flex: 1;
+}
+
 /* Root container */
 #root {
     display: flex;
@@ -309,10 +326,21 @@ a:hover {
     margin-top: auto; /* Push footer to bottom if content is short */
 }
 
+footer {
+    background: #004d40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
 /* Publications */
 .publications {
     padding: 20px;
-    background: #f9f9f9;
+    background: #e0f2f1; /* Light green background */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -332,21 +360,26 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.publication-item h3 a {
+.publication-title h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.publication-journal h4 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.publication-link a {
     color: #007bff;
     text-decoration: none;
 }
 
-.publication-item h3 a:hover {
+.publication-link a:hover {
     text-decoration: underline;
 }
 
-.publication-item h4 {
-    color: #555;
-    margin-top: 10px;
-}
-
-.publication-item p {
+.publication-abstract p {
     color: #333;
     margin-top: 10px;
 }
@@ -548,32 +581,12 @@ a:hover {
     background-color: #0056b3;
 }
 
-/* App and Home */
-body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.App {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.home {
-    flex: 1;
-}
-
-/* Footer */
-footer {
-    background: #004d40;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: auto;
+/* CV Section */
+.cv {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
 }
