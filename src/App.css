@@ -15,7 +15,6 @@ h1, h2, h3 {
 }
 
 .hero {
-    background-image: url('../public/banner-image.jpg');
     background-size: cover;
     background-position: center;
     height: 60vh;
