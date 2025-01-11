@@ -26,13 +26,18 @@ const publications = [
 
 const PublicationItem = ({ title, journal, link, abstract }) => (
     <div className="publication-item">
-        <h3>
-            <a href={link} target="_blank" rel="noopener noreferrer">
-                {title}
-            </a>
-        </h3>
-        <h4>{journal}</h4>
-        <p>{abstract}</p>
+        <div className="publication-title">
+            <h3>{title}</h3>
+        </div>
+        <div className="publication-journal">
+            <h4>{journal}</h4>
+        </div>
+        <div className="publication-link">
+            <a href={link} target="_blank" rel="noopener noreferrer">Read Full Paper</a>
+        </div>
+        <div className="publication-abstract">
+            <p>{abstract}</p>
+        </div>
     </div>
 );
 
