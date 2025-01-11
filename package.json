@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://Adnibog.github.io/gp",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"

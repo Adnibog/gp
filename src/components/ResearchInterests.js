@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles.css';
 
 const ResearchInterests = () => {
     const interests = [
@@ -47,16 +48,17 @@ const ResearchInterests = () => {
     return (
         <div className="research-interests">
             <h2>Research Interests</h2>
-            <ul>
+            <div className="research-interests-grid">
                 {interests.map((interest, index) => (
-                    <li key={index}>
+                    <div key={index} className="research-interest-card">
                         <h3>{interest.title}</h3>
                         <p>{interest.description}</p>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
 
 export default ResearchInterests;
+

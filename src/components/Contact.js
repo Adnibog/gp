@@ -1,4 +1,3 @@
-// filepath: /home/gobinda/gp/portfolio/src/components/Contact.js
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -28,7 +27,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="contact-container">
+        <div className="contact-container section">
             <h2>Contact Me</h2>
             <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group">
@@ -67,21 +66,23 @@ const Contact = () => {
             </form>
             <div className="contact-details">
                 <h3>Contact Details</h3>
-                <p>
-                    <FontAwesomeIcon icon={faPhone} /> (+1)-585-290-2209
-                </p>
-                <p>
-                    <FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:gp8479@g.rit.edu">gp8479@g.rit.edu</a>
-                </p>
-                <p>
-                    <FontAwesomeIcon icon={faMapMarkerAlt} /> Rochester, NY, USA
-                </p>
-                <p>
-                    <FontAwesomeIcon icon={faLinkedin} /> <a href="https://www.linkedin.com/in/gobinda-pandey-6b8127185/">gobinda-pandey</a>
-                </p>
-                <p>
-                    <FontAwesomeIcon icon={faGithub} /> <a href="https://github.com/Adnibog">Adnibog</a>
-                </p>
+                <div className="contact-details-inline">
+                    <div className="contact-item">
+                        <FontAwesomeIcon icon={faPhone} /> (+1)-585-290-2209
+                    </div>
+                    <div className="contact-item">
+                        <FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:gp8479@g.rit.edu">gp8479@g.rit.edu</a>
+                    </div>
+                    <div className="contact-item">
+                        <FontAwesomeIcon icon={faMapMarkerAlt} /> Rochester, NY, USA
+                    </div>
+                    <div className="contact-item">
+                        <FontAwesomeIcon icon={faLinkedin} /> <a href="https://www.linkedin.com/in/gobinda-pandey-6b8127185/">gobinda-pandey</a>
+                    </div>
+                    <div className="contact-item">
+                        <FontAwesomeIcon icon={faGithub} /> <a href="https://github.com/Adnibog">Adnibog</a>
+                    </div>
+                </div>
             </div>
         </div>
     );
