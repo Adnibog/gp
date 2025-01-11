@@ -304,6 +304,48 @@ a:hover {
     margin-top: auto; /* Push footer to bottom if content is short */
 }
 
+/* Publications */
+.publications {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.publications-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.publication-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.publication-item h3 a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.publication-item h3 a:hover {
+    text-decoration: underline;
+}
+
+.publication-item h4 {
+    color: #555;
+    margin-top: 10px;
+}
+
+.publication-item p {
+    color: #333;
+    margin-top: 10px;
+}
+
 /* Projects Section */
 .projects-container {
     padding: 20px;

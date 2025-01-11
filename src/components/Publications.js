@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles.css';
 
 const publications = [
     {
@@ -24,12 +25,15 @@ const publications = [
 ];
 
 const PublicationItem = ({ title, journal, link, abstract }) => (
-    <li>
-        <a href={link} target="_blank" rel="noopener noreferrer">
-            {title}
-        </a> - {journal}
+    <div className="publication-item">
+        <h3>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+                {title}
+            </a>
+        </h3>
+        <h4>{journal}</h4>
         <p>{abstract}</p>
-    </li>
+    </div>
 );
 
 PublicationItem.propTypes = {
@@ -40,9 +44,9 @@ PublicationItem.propTypes = {
 };
 
 const Publications = () => (
-    <div className="publications">
+    <div className="publications section">
         <h2>Publications</h2>
-        <ul>
+        <div className="publications-grid">
             {publications.map((pub, index) => (
                 <PublicationItem
                     key={index}
@@ -52,7 +56,7 @@ const Publications = () => (
                     abstract={pub.abstract}
                 />
             ))}
-        </ul>
+        </div>
     </div>
 );
 
