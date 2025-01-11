@@ -1,35 +1,23 @@
 {
-  "name": "gobinda-pandey-portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "A professional academic portfolio website for Gobinda Pandey, showcasing research interests, publications, and projects.",
-  "main": "src/index.js",
+  "private": true,
+  "homepage": "https://Adnibog.github.io/gp",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "keywords": [
-    "portfolio",
-    "academic",
-    "react",
-    "gobinda pandey"
-  ],
-  "author": "Gobinda Pandey",
-  "license": "MIT",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "react-spring": "^9.4.4"
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^3.2.3"
   },
-  "homepage": "https://Adnibog.github.io/gp",
   "browserslist": {
     "production": [
       ">0.2%",
