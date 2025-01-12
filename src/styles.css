@@ -743,3 +743,71 @@ footer {
         max-width: 80%;
     }
 }
+/* Responsive Design for Entire Webpage */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 10px;
+    }
+
+    .hero-content, .about-container, .education, .description, .experience, .hobbies, .research-interests, .skills, .projects-container, .certifications, .contact-container, .cv {
+        padding: 20px;
+    }
+
+    .education, .experience, .hobbies, .research-interests, .skills, .projects-container, .certifications {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-left, .education-right, .education-item, .hobby-item, .research-interest-card, .skill-card, .project-card, .certification {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .projects-grid, .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card, .certification {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .hero .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero .view-cv {
+        font-size: 1.2em;
+        padding: 8px 16px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 8px;
+    }
+
+    .contact-form button {
+        padding: 8px 16px;
+    }
+
+    .navbar a {
+        font-size: 1em;
+    }
+
+    .footer, footer {
+        padding: 8px;
+    }
+}
