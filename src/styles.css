@@ -9,8 +9,8 @@ html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background: #45858d; /* Lighter green background */
-    color: #ffffff; /* White text color for better contrast */
+    background: #e0f2f1; /* Light green background */
+    color: white; /* White text color */
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -44,7 +44,7 @@ body, html {
 /* Global Styles */
 h1, h2, h3 {
     margin: 20px 0;
-    color: #ffffff;
+    color: white;
 }
 
 h1 {
@@ -64,7 +64,7 @@ h3 {
 }
 
 a {
-    color: #80deea;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -81,8 +81,8 @@ a:hover {
 
 /* Hero Section */
 .hero {
-    background: #10857f; /* Lighter green background */
-    color: #ffffff;
+    background: #007bff; /* Blue background */
+    color: white;
     padding: 20px;
     text-align: center;
 }
@@ -90,10 +90,6 @@ a:hover {
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    background: #ffffff; /* White background */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero .profile-img {
@@ -126,7 +122,7 @@ a:hover {
 
 .hero .view-cv:hover {
     background-color: #80deea;
-    color: #004d40;
+    color: #007bff;
 }
 
 /* About Section */
@@ -139,7 +135,7 @@ a:hover {
 }
 
 .about-me {
-    background: #10857f; /* Lighter green background */
+    background: #fff; /* White background */
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -161,7 +157,7 @@ a:hover {
 /* Education Section */
 .education {
     padding: 40px;
-    background: #10857f; /* Lighter green background */
+    background: #fff; /* White background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
@@ -183,7 +179,7 @@ a:hover {
 
 .education-item .education-icon {
     font-size: 3em;
-    color: #80deea;
+    color: #007bff;
     margin-right: 10px;
 }
 
@@ -205,7 +201,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 40px;
-    background: #10857f; /* Lighter green background */
+    background: #fff; /* White background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -220,19 +216,19 @@ a:hover {
 
 .hobby-item .hobby-icon {
     font-size: 3em;
-    color: #80deea;
+    color: #007bff;
     margin-bottom: 10px;
 }
 
 .hobby-item p {
     font-size: 1.2em;
-    color: #ffffff;
+    color: #333;
 }
 
 /* Research Interests Section */
 .research-interests {
     padding: 40px;
-    background: #10857f; /* Lighter green background */
+    background: #fff; /* White background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
@@ -247,7 +243,7 @@ a:hover {
 }
 
 .research-interest-card {
-    background: #ffffff; /* White background */
+    background: #fff; /* White background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -261,14 +257,14 @@ a:hover {
 
 .research-interest-card p {
     font-size: 1.1em;
-    color: #004d40;
+    color: #333;
 }
 
 /* Skills Section */
 .skills {
     padding: 20px;
-    background: #10857f; /* Lighter green background */
-    border-radius: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
     margin: 20px auto;
@@ -319,18 +315,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Navbar */
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar a {
-        margin: 10px 0;
-    }
-}
-
 /* Footer */
 .footer {
     background: #333;
@@ -343,7 +327,7 @@ a:hover {
 }
 
 footer {
-    background: #004d40;
+    background: #007bff;
     color: white;
     text-align: center;
     padding: 10px;
@@ -356,7 +340,7 @@ footer {
 /* Publications */
 .publications {
     padding: 20px;
-    background: #10857f; /* Lighter green background */
+    background: #e0f2f1; /* Light green background */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -377,7 +361,7 @@ footer {
 }
 
 .publication-title h3 {
-    color: #80deea;
+    color: #007bff;
     margin-bottom: 10px;
 }
 
@@ -387,7 +371,7 @@ footer {
 }
 
 .publication-link a {
-    color: #80deea;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -403,7 +387,7 @@ footer {
 /* Projects Section */
 .projects-container {
     padding: 20px;
-    background: #10857f; /* Lighter green background */
+    background: #fff; /* White background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -417,7 +401,7 @@ footer {
 }
 
 .project-card {
-    background: #ffffff; /* White background */
+    background: #fff; /* White background */
     border: 1px solid #ddd;
     border-radius: 10px;
     margin: 10px;
@@ -435,7 +419,7 @@ footer {
 }
 
 .project-card a {
-    color: #80deea;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -446,7 +430,7 @@ footer {
 /* Certifications Section */
 .certifications {
     padding: 20px;
-    background: #10857f; /* Lighter green background */
+    background: #fff; /* White background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -460,7 +444,7 @@ footer {
 }
 
 .certification {
-    background: #ffffff; /* White background */
+    background: #fff; /* White background */
     border: 1px solid #ddd;
     border-radius: 10px;
     margin: 10px;
@@ -478,7 +462,7 @@ footer {
 
 /* Contact Section */
 .contact-container {
-    background: #10857f; /* Lighter green background */
+    background: #fff; /* White background */
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
@@ -489,7 +473,7 @@ footer {
 
 .contact-form {
     width: 100%;
-    background: #ffffff; /* White background */
+    background: #fff; /* White background */
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
