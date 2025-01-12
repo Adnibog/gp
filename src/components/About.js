@@ -19,13 +19,13 @@ const education = [
         institution: 'Rochester Institute of Technology',
         location: 'Rochester, NY, USA',
         degree: 'PhD in Computing and Information Sciences',
-        duration: 'Aug 2024 – Present',
+        duration: 'Aug 2024 – Present'
     },
     {
         institution: 'Tribhuvan University (Institute of Engineering)',
         location: 'Pokhara, Gandaki, Nepal',
         degree: 'Bachelor’s in Electronics, Communication and Information Engineering',
-        duration: 'Nov 2018 – Sep 2023',
+        duration: 'Nov 2018 – Sep 2023'
     }
 ];
 
@@ -43,9 +43,6 @@ const experience = [
 ];
 
 const About = () => {
-    console.log('Education:', education);
-    console.log('Experience:', experience);
-
     return (
         <div className="about-container section">
             <h2>About Me</h2>
@@ -61,12 +58,10 @@ const About = () => {
             <div className="education">
                 {education.map((edu, index) => (
                     <div key={index} className="education-item">
-                        <div>
-                            <p><strong>{edu.institution}</strong></p>
-                            <p>{edu.location}</p>
-                            <p>{edu.degree}</p>
-                            <p>{edu.duration}</p>
-                        </div>
+                        <p><strong>{edu.institution}</strong></p>
+                        <p>{edu.location}</p>
+                        <p>{edu.degree}</p>
+                        <p>{edu.duration}</p>
                     </div>
                 ))}
             </div>
@@ -74,25 +69,26 @@ const About = () => {
             <div className="experience">
                 {experience.map((exp, index) => (
                     <div key={index} className="experience-item">
-                        <div>
-                            <p><strong>{exp.title}</strong></p>
-                            <p>{exp.description}</p>
-                            <p>{exp.duration}</p>
-                        </div>
+                        <p><strong>{exp.title}</strong></p>
+                        <p>{exp.description}</p>
+                        <p>{exp.duration}</p>
                     </div>
                 ))}
             </div>
             <h3>Hobbies</h3>
-            <div className="hobbies">
-                {hobbies.map((hobby, index) => (
-                    <div key={index} className="hobby-item">
-                        <FontAwesomeIcon icon={hobby.icon} className="hobby-icon" />
-                        <p>{hobby.name}</p>
-                    </div>
-                ))}
+            <div className="hobbies section">
+                <div className="hobbies-grid">
+                    {hobbies.map((hobby, index) => (
+                        <div key={index} className="hobby-item">
+                            <FontAwesomeIcon icon={hobby.icon} className="hobby-icon" />
+                            <p>{hobby.name}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
 };
 
 export default About;
+

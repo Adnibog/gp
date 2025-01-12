@@ -161,50 +161,6 @@ a:hover {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
-
-/* Education Section */
-.education {
-    padding: 40px;
-    background: #ffffff; /* White background */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.education-left,
-.education-right {
-    flex: 1;
-    margin: 10px;
-    min-width: 300px; /* Ensure columns don't shrink too much */
-}
-
-.education-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.education-item .education-icon {
-    font-size: 3em;
-    color: #80deea;
-    margin-right: 10px;
-}
-
-.education-item .education-details {
-    flex-grow: 1;
-}
-
-.education-item h3 {
-    font-size: 1.5em;
-}
-
-.education-item p {
-    margin: 5px 0;
-}
-
 /* Description Section */
 .description {
     background: #ffffff; /* White background */
@@ -213,21 +169,59 @@ a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
-    text-align: justify;
+    text-align: justify; /* Justify text for description */
+}
+
+/* Education Section */
+.education {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: left; /* Ensure left-aligned content */
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Column grid layout */
+    gap: 20px; /* Add space between items */
+}
+
+.education-item {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Left-aligned text */
+}
+
+.education-item p {
+    margin: 5px 0;
 }
 
 /* Experience Section */
 .experience {
-    background: #ffffff; /* White background */
-    color: #004d40; /* Darker text color */
-    padding: 40px;
+    padding: 20px;
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
+    text-align: left; /* Ensure left-aligned content */
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Column grid layout */
+    gap: 20px; /* Add space between items */
 }
 
 .experience-item {
-    margin-bottom: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Left-aligned text */
 }
 
 .experience-item p {
@@ -236,57 +230,39 @@ a:hover {
 
 /* Hobbies Section */
 .hobbies {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 40px;
-    background: #ffffff; /* White background */
+    padding: 20px;
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.hobbies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .hobby-item {
-    display: flex;
-    align-items: center;
-    margin: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    flex-basis: 22%;
-    min-width: 150px; /* Ensure items don't shrink too much */
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
 }
 
-.hobby-item .hobby-icon {
-    font-size: 3em;
-    color: #80deea;
+.hobby-icon {
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
 .hobby-item p {
     font-size: 1.2em;
-    color: #004d40;
-}
-
-/* Responsive Design for About Section */
-@media screen and (max-width: 768px) {
-    .education {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .education-left,
-    .education-right {
-        margin: 10px 0;
-        min-width: 100%; /* Full width on small screens */
-    }
-
-    .hobbies {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hobby-item {
-        flex-basis: 100%;
-        margin: 10px 0;
-    }
+    color: #333;
 }
 
 /* Research Interests Section */
@@ -620,13 +596,6 @@ footer {
     background: #0056b3;
 }
 
-/* Education and Hobbies Layout Fix */
-.education-item, .hobby-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -727,49 +696,6 @@ footer {
     background-color: #0056b3;
 }
 
-/* Responsive Design for About Page */
-@media screen and (max-width: 768px) {
-    .about-container {
-        padding: 20px;
-    }
-
-    .about-me {
-        padding: 20px;
-    }
-
-    .education {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .education-left,
-    .education-right {
-        margin: 10px 0;
-    }
-
-    .hobbies {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hobby-item {
-        flex-basis: 100%;
-        margin: 10px 0;
-    }
-
-    .research-interests-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill-card {
-        max-width: 80%;
-    }
-}
 /* Responsive Design for Entire Webpage */
 @media screen and (max-width: 1024px) {
     .container {
@@ -785,7 +711,7 @@ footer {
         align-items: center;
     }
 
-    .education-left, .education-right, .education-item, .hobby-item, .research-interest-card, .skill-card, .project-card, .certification {
+    .education-item, .hobby-item, .research-interest-card, .skill-card, .project-card, .certification {
         margin: 10px 0;
         width: 100%;
     }
