@@ -161,6 +161,7 @@ a:hover {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
+
 /* Description Section */
 .description {
     background: #ffffff; /* White background */
@@ -170,6 +171,41 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
     text-align: justify; /* Justify text for description */
+}
+
+/* Responsive Design for About Section */
+@media screen and (max-width: 1024px) {
+    .about-container, .about-me, .description {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-me p {
+        font-size: 1em;
+    }
+
+    .about-me h3 {
+        font-size: 1.2em;
+    }
+
+    .description {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-container, .about-me, .description {
+        padding: 10px;
+    }
+
+    .about-me p {
+        font-size: 0.9em;
+    }
+
+    .about-me h3 {
+        font-size: 1em;
+    }
 }
 
 /* Education Section */
@@ -200,6 +236,29 @@ a:hover {
     margin: 5px 0;
 }
 
+/* Responsive Design for Education Section */
+@media screen and (max-width: 1024px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .education-item {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .education {
+        padding: 10px;
+    }
+
+    .education-item {
+        padding: 10px;
+    }
+}
+
 /* Experience Section */
 .experience {
     padding: 20px;
@@ -226,6 +285,29 @@ a:hover {
 
 .experience-item p {
     margin: 5px 0;
+}
+
+/* Responsive Design for Experience Section */
+@media screen and (max-width: 1024px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .experience-item {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .experience {
+        padding: 10px;
+    }
+
+    .experience-item {
+        padding: 10px;
+    }
 }
 
 /* Hobbies Section */
@@ -263,6 +345,28 @@ a:hover {
 .hobby-item p {
     font-size: 1.2em;
     color: #333;
+}
+
+/* Responsive Design for Hobbies Section */
+@media screen and (max-width: 1024px) {
+    .hobby-item {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hobby-item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hobby-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 
 /* Research Interests Section */
@@ -387,7 +491,7 @@ a:hover {
 }
 
 /* Responsive Navbar */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -401,7 +505,7 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .navbar a {
         font-size: 1em; /* Adjust font size for smaller screens */
         padding: 8px 10px; /* Adjust padding for smaller screens */
@@ -497,6 +601,53 @@ footer {
     text-align: justify; /* Justified text alignment */
 }
 
+/* Responsive Design for Publications Section */
+@media screen and (max-width: 1024px) {
+    .publications {
+        padding: 20px;
+    }
+
+    .publication-item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .publication-title h3 {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+
+    .publication-journal h4 {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .publication-abstract p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .publications {
+        padding: 10px;
+    }
+
+    .publication-item {
+        padding: 10px;
+    }
+
+    .publication-title h3 {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .publication-journal h4 {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+
+    .publication-abstract p {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+}
+
 /* Projects Section */
 .projects-container {
     padding: 20px;
@@ -549,6 +700,49 @@ footer {
     text-decoration: underline;
 }
 
+/* Responsive Design for Projects Section */
+@media screen and (max-width: 1024px) {
+    .projects-container {
+        padding: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-card h3 {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .project-card img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-container {
+        padding: 10px;
+    }
+
+    .project-card {
+        padding: 10px;
+    }
+
+    .project-card h3 {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+
+    .project-card img {
+        width: 100%;
+    }
+}
+
 /* Certifications Section */
 .certifications {
     padding: 20px;
@@ -588,6 +782,49 @@ footer {
 
 .certification p {
     text-align: justify; /* Justified alignment for content */
+}
+
+/* Responsive Design for Certifications Section */
+@media screen and (max-width: 1024px) {
+    .certifications {
+        padding: 20px;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certification {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .certification h3 {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .certification img {
+        width: 60px; /* Adjust logo size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .certifications {
+        padding: 10px;
+    }
+
+    .certification {
+        padding: 10px;
+    }
+
+    .certification h3 {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+
+    .certification img {
+        width: 50px; /* Adjust logo size for smaller screens */
+    }
 }
 
 /* Contact Section */
@@ -761,6 +998,14 @@ h1 {
 
 .cv-link:hover {
     background-color: #0056b3;
+}
+
+/* Responsive Design for CV Link */
+@media screen and (max-width: 480px) {
+    .cv-link, .cv .cv-link {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
 }
 
 /* CV Section */
