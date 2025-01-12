@@ -9,8 +9,8 @@ html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background: #e0f2f1; /* Light green background */
-    color: white; /* White text color */
+    background: #004d40; /* Lighter green background */
+    color: #f0f0f0; /* Light text color */
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -44,7 +44,7 @@ body, html {
 /* Global Styles */
 h1, h2, h3 {
     margin: 20px 0;
-    color: white;
+    color: #f0f0f0;
 }
 
 h1 {
@@ -64,7 +64,7 @@ h3 {
 }
 
 a {
-    color: #007bff;
+    color: #80deea;
     text-decoration: none;
 }
 
@@ -81,7 +81,7 @@ a:hover {
 
 /* Hero Section */
 .hero {
-    background: #007bff; /* Blue background */
+    background: #004d40; /* Lighter green background */
     color: white;
     padding: 20px;
     text-align: center;
@@ -122,7 +122,7 @@ a:hover {
 
 .hero .view-cv:hover {
     background-color: #80deea;
-    color: #007bff;
+    color: #004d40;
 }
 
 /* About Section */
@@ -135,7 +135,7 @@ a:hover {
 }
 
 .about-me {
-    background: #fff; /* White background */
+    background: #004d40; /* Lighter green background */
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -157,7 +157,7 @@ a:hover {
 /* Education Section */
 .education {
     padding: 40px;
-    background: #fff; /* White background */
+    background: #004d40; /* Lighter green background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
@@ -179,7 +179,7 @@ a:hover {
 
 .education-item .education-icon {
     font-size: 3em;
-    color: #007bff;
+    color: #80deea;
     margin-right: 10px;
 }
 
@@ -201,7 +201,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 40px;
-    background: #fff; /* White background */
+    background: #004d40; /* Lighter green background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -216,19 +216,19 @@ a:hover {
 
 .hobby-item .hobby-icon {
     font-size: 3em;
-    color: #007bff;
+    color: #80deea;
     margin-bottom: 10px;
 }
 
 .hobby-item p {
     font-size: 1.2em;
-    color: #333;
+    color: #f0f0f0;
 }
 
 /* Research Interests Section */
 .research-interests {
     padding: 40px;
-    background: #fff; /* White background */
+    background: #004d40; /* Lighter green background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
@@ -243,7 +243,7 @@ a:hover {
 }
 
 .research-interest-card {
-    background: #fff; /* White background */
+    background: #004d40; /* Lighter green background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -257,13 +257,13 @@ a:hover {
 
 .research-interest-card p {
     font-size: 1.1em;
-    color: #333;
+    color: #f0f0f0;
 }
 
 /* Skills Section */
 .skills {
     padding: 20px;
-    background: #f9f9f9;
+    background: #e0f2f1; /* Light green background */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -315,6 +315,18 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+}
+
 /* Footer */
 .footer {
     background: #333;
@@ -327,7 +339,7 @@ a:hover {
 }
 
 footer {
-    background: #007bff;
+    background: #004d40;
     color: white;
     text-align: center;
     padding: 10px;
@@ -387,7 +399,7 @@ footer {
 /* Projects Section */
 .projects-container {
     padding: 20px;
-    background: #fff; /* White background */
+    background: #004d40; /* Lighter green background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -401,7 +413,7 @@ footer {
 }
 
 .project-card {
-    background: #fff; /* White background */
+    background: #004d40; /* Lighter green background */
     border: 1px solid #ddd;
     border-radius: 10px;
     margin: 10px;
@@ -419,7 +431,7 @@ footer {
 }
 
 .project-card a {
-    color: #007bff;
+    color: #80deea;
     text-decoration: none;
 }
 
@@ -430,7 +442,7 @@ footer {
 /* Certifications Section */
 .certifications {
     padding: 20px;
-    background: #fff; /* White background */
+    background: #004d40; /* Lighter green background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -444,7 +456,7 @@ footer {
 }
 
 .certification {
-    background: #fff; /* White background */
+    background: #004d40; /* Lighter green background */
     border: 1px solid #ddd;
     border-radius: 10px;
     margin: 10px;
@@ -462,7 +474,7 @@ footer {
 
 /* Contact Section */
 .contact-container {
-    background: #fff; /* White background */
+    background: #004d40; /* Lighter green background */
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
@@ -473,7 +485,7 @@ footer {
 
 .contact-form {
     width: 100%;
-    background: #fff; /* White background */
+    background: #004d40; /* Lighter green background */
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
