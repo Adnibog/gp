@@ -27,7 +27,7 @@ const Home = () => {
                     <a href={`${process.env.PUBLIC_URL}/Adnibog_CV.pdf`} className="cv-link" target="_blank" rel="noopener noreferrer">View CV</a>
                 </div>
             </section>
-            <section className="skills section">
+            <section className="skills section" style={{ backgroundColor: 'lightgreen' }}>
                 <div className="hero-content">
                     <h2>Skills</h2>
                     <div className="skills-grid">

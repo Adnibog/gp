@@ -39,6 +39,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
+                        className="form-control"
                     />
                 </div>
                 <div className="form-group">
@@ -50,6 +51,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
+                        className="form-control"
                     />
                 </div>
                 <div className="form-group">
@@ -60,6 +62,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
+                        className="form-control"
                     ></textarea>
                 </div>
                 <button type="submit" className="submit-button">Send</button>
