@@ -793,6 +793,70 @@ footer {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .education-item,
+    .hobby-item,
+    .research-interest-card,
+    .skill-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-grid, .certifications-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card, .certification {
+        width: 80%;
+    }
+
+    .hobbies {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hobby-item {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+
+    .about-container {
+        padding: 20px;
+    }
+
+    .about-me {
+        padding: 20px;
+    }
+
+    .education {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-left,
+    .education-right {
+        margin: 10px 0;
+    }
+
+    .research-interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        max-width: 80%;
+    }
+}
+
 @media screen and (max-width: 480px) {
     h1 {
         font-size: 2em;
