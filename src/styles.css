@@ -983,6 +983,33 @@ h1 {
     }
 }
 
+.hero .view-cv {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 2px solid #80deea;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Ensure the button is centered */
+    animation: pulse 2s infinite;
+}
+
+.hero .view-cv:hover {
+    background-color: #80deea;
+    color: #004d40;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design for View CV */
+@media screen and (max-width: 480px) {
+    .hero .view-cv {
+        font-size: 1.2em;
+        padding: 8px 16px;
+    }
+}
+
 .cv-link {
     display: block;
     text-align: center;
