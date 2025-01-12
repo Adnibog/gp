@@ -9,7 +9,7 @@ html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background: #f0f4f3; /* Lighter green background */
+    background: #e0f2f1; /* Lighter green background */
     color: #333; /* Darker text color for better readability */
     display: flex;
     flex-direction: column;
@@ -31,6 +31,7 @@ body, html {
 
 .home {
     flex: 1;
+    background: #e0f2f1; /* Lighter green background */
 }
 
 /* Root container */
@@ -222,7 +223,7 @@ footer {
 /* Publications */
 .publications {
     padding: 20px;
-    background: #f0f4f3; /* Light green background */
+    background: #e0f2f1; /* Light green background */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
