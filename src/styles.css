@@ -263,7 +263,7 @@ a:hover {
 /* Skills Section */
 .skills {
     padding: 20px;
-    background: #f9f9f9;
+    background: #e0f2f1; /* Light green background */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -313,6 +313,18 @@ a:hover {
 
 .navbar a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
 }
 
 /* Footer */
