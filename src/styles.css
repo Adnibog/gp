@@ -31,7 +31,6 @@ body, html {
 
 .home {
     flex: 1;
-    background: #e0f2f1; /* Lighter green background */
 }
 
 /* Root container */
@@ -82,8 +81,8 @@ a:hover {
 
 /* Hero Section */
 .hero {
-    background: #009688; /* Lighter green background */
-    color: white;
+    background: #e0f2f1; /* Lighter green background */
+    color: #333;
     padding: 20px;
     text-align: center;
 }
@@ -123,13 +122,13 @@ a:hover {
 
 .hero .view-cv:hover {
     background-color: #80deea;
-    color: #00796b;
+    color: #004d40;
 }
 
 /* Skills Section */
 .skills {
     padding: 20px;
-    background: #009688; /* Lighter green background */
+    background: #e0f2f1; /* Lighter green background */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -210,8 +209,8 @@ a:hover {
 }
 
 footer {
-    background: #009688;
-    color: white;
+    background: #e0f2f1; /* Lighter green background */
+    color: #333;
     text-align: center;
     padding: 10px;
     position: relative;
@@ -223,7 +222,7 @@ footer {
 /* Publications */
 .publications {
     padding: 20px;
-    background: #e0f2f1; /* Light green background */
+    background: #e0f2f1; /* Lighter green background */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -270,7 +269,7 @@ footer {
 /* Projects Section */
 .projects-container {
     padding: 20px;
-    background: #009688; /* Lighter green background */
+    background: #e0f2f1; /* Lighter green background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -284,7 +283,7 @@ footer {
 }
 
 .project-card {
-    background: #009688; /* Lighter green background */
+    background: #e0f2f1; /* Lighter green background */
     border: 1px solid #ddd;
     border-radius: 10px;
     margin: 10px;
@@ -302,7 +301,7 @@ footer {
 }
 
 .project-card a {
-    color: #80deea;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -313,7 +312,7 @@ footer {
 /* Certifications Section */
 .certifications {
     padding: 20px;
-    background: #009688; /* Lighter green background */
+    background: #e0f2f1; /* Lighter green background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -327,7 +326,7 @@ footer {
 }
 
 .certification {
-    background: #009688; /* Lighter green background */
+    background: #e0f2f1; /* Lighter green background */
     border: 1px solid #ddd;
     border-radius: 10px;
     margin: 10px;
@@ -345,7 +344,7 @@ footer {
 
 /* Contact Section */
 .contact-container {
-    background: #009688; /* Lighter green background */
+    background: #e0f2f1; /* Lighter green background */
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
@@ -356,7 +355,7 @@ footer {
 
 .contact-form {
     width: 100%;
-    background: #f0f4f3; /* Lighter background */
+    background: #e0f2f1; /* Lighter green background */
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
@@ -373,7 +372,7 @@ footer {
 }
 
 .contact-form textarea {
-    height: 200px; /* Increase the height of the message field */
+    height: 150px; /* Increase the height of the message field */
 }
 
 .contact-form input::placeholder,
@@ -442,10 +441,6 @@ footer {
     .project-card, .certification {
         width: 80%;
     }
-
-    .contact-container {
-        width: 90%;
-    }
 }
 
 /* Additional Styles */
@@ -475,7 +470,7 @@ footer {
 /* CV Section */
 .cv {
     padding: 20px;
-    background: #f9f9f9;
+    background: #e0f2f1; /* Lighter green background */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
