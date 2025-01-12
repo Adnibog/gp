@@ -810,4 +810,9 @@ footer {
     .footer, footer {
         padding: 8px;
     }
+
+    .container, .hero-content, .about-container, .education, .description, .experience, .hobbies, .research-interests, .skills, .projects-container, .certifications, .contact-container, .cv {
+        padding: 10px;
+        margin: 0 10px;
+    }
 }
