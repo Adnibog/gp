@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic, faBook, faUtensils, faPenNib, faFutbol, faBrain, faSpa } from '@fortawesome/free-solid-svg-icons';
-import { faUniversity } from '@fortawesome/free-solid-svg-icons';
 import '../styles.css';
 
 const hobbies = [
@@ -21,18 +20,32 @@ const education = [
         location: 'Rochester, NY, USA',
         degree: 'PhD in Computing and Information Sciences',
         duration: 'Aug 2024 – Present',
-        icon: faUniversity
     },
     {
         institution: 'Tribhuvan University (Institute of Engineering)',
         location: 'Pokhara, Gandaki, Nepal',
         degree: 'Bachelor’s in Electronics, Communication and Information Engineering',
         duration: 'Nov 2018 – Sep 2023',
-        icon: faUniversity
+    }
+];
+
+const experience = [
+    {
+        title: 'Graduate Research Assistant',
+        description: 'Research on exploring microarchitectural timing attack vectors on different processor architectures.',
+        duration: 'Aug 2024 – Dec 2024'
+    },
+    {
+        title: 'Teaching Assistant for Side Channel Analysis Course',
+        description: 'Assisted in teaching the Side Channel Analysis course, providing support to students and helping with course materials.',
+        duration: 'Aug 2024 – Dec 2024'
     }
 ];
 
 const About = () => {
+    console.log('Education:', education);
+    console.log('Experience:', experience);
+
     return (
         <div className="about-container section">
             <h2>About Me</h2>
@@ -48,12 +61,23 @@ const About = () => {
             <div className="education">
                 {education.map((edu, index) => (
                     <div key={index} className="education-item">
-                        <FontAwesomeIcon icon={edu.icon} className="education-icon" />
                         <div>
                             <p><strong>{edu.institution}</strong></p>
                             <p>{edu.location}</p>
                             <p>{edu.degree}</p>
                             <p>{edu.duration}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <h3>Experience</h3>
+            <div className="experience">
+                {experience.map((exp, index) => (
+                    <div key={index} className="experience-item">
+                        <div>
+                            <p><strong>{exp.title}</strong></p>
+                            <p>{exp.description}</p>
+                            <p>{exp.duration}</p>
                         </div>
                     </div>
                 ))}

@@ -29,47 +29,47 @@ const Contact = () => {
     return (
         <div className="contact-container section">
             <h2>Contact Me</h2>
-            <form onSubmit={handleSubmit} className="contact-form">
-                <div className="form-group">
-                    <label htmlFor="name">Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="form-control"
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="form-control"
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="message">Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        className="form-control"
-                    ></textarea>
-                </div>
-                <button type="submit" className="submit-button">Send</button>
-            </form>
-            <div className="contact-details">
-                <h3>Contact Details</h3>
-                <div className="contact-details-inline">
+            <div className="contact-content">
+                <form onSubmit={handleSubmit} className="contact-form">
+                    <div className="form-group">
+                        <label htmlFor="name">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            className="form-control"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            className="form-control"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
+                            required
+                            className="form-control"
+                        ></textarea>
+                    </div>
+                    <button type="submit" className="submit-button">Send</button>
+                </form>
+                <div className="contact-details">
+                    <h3>Contact Details</h3>
                     <div className="contact-item">
                         <FontAwesomeIcon icon={faPhone} /> (+1)-585-290-2209
                     </div>
