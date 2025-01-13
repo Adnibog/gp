@@ -20,7 +20,7 @@ const Navbar = () => {
                 <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
-                    <Link to="/research-interests">Research Interests</Link>
+                    <Link to="/interests">Interests</Link>
                     <Link to="/publications">Publications</Link>
                     <Link to="/projects">Projects</Link>
                     <Link to="/certifications">Certifications</Link>
