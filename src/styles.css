@@ -573,6 +573,23 @@ a:hover {
     }
 }
 
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.navbar.active .hamburger div {
+    background-color: #007bff; /* Change color when active */
+}
+
 /* Add page names to the navbar */
 .navbar a.home-link::before {
     content: "Home";
@@ -600,6 +617,14 @@ a:hover {
 
 .navbar a.contact-link::before {
     content: "Contact";
+}
+
+/* Adjust view-cv hover effect */
+.hero .view-cv:hover {
+    background-color: #80deea;
+    color: #004d40;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    border-radius: 30px; /* Ensure rounded rectangle */
 }
 
 /* Footer */
@@ -1203,19 +1228,11 @@ h1 {
 
 /* Responsive Design for CV Link */
 @media screen and (max-width: 480px) {
-    .cv-link, .cv .cv-link {
+    .cv-link {
         padding: 8px 16px;
         font-size: 1em;
         width: 100%; /* Ensure the link covers the full width */
         box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    }
-}
-
-/* Responsive Design for CV Link */
-@media screen and (max-width: 480px) {
-    .cv-link, .cv .cv-link {
-        padding: 8px 16px;
-        font-size: 1em;
     }
 }
 
@@ -1255,11 +1272,12 @@ h1 {
 
 /* Responsive Design for CV Link */
 @media screen and (max-width: 480px) {
-    .cv-link, .cv .cv-link {
+    .cv .cv-link {
         padding: 8px 16px;
         font-size: 1em;
     }
 }
+
 /* Responsive Design for Entire Webpage */
 @media screen and (max-width: 1024px) {
     .container {
