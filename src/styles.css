@@ -526,10 +526,11 @@ a:hover {
         text-align: center; /* Center align text */
     }
 }
+
 @media screen and (max-width: 768px) {
     .navbar {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
     }
 
     .navbar a {
@@ -551,9 +552,8 @@ a:hover {
 
 @media screen and (max-width: 480px) {
     .navbar {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
     }
 
     .navbar a {
@@ -571,60 +571,6 @@ a:hover {
     .hamburger {
         display: flex;
     }
-}
-
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-.navbar.active .hamburger div {
-    background-color: #007bff; /* Change color when active */
-}
-
-/* Add page names to the navbar */
-.navbar a.home-link::before {
-    content: "Home";
-}
-
-.navbar a.about-link::before {
-    content: "About";
-}
-
-.navbar a.interests-link::before {
-    content: "Interests";
-}
-
-.navbar a.publications-link::before {
-    content: "Publications";
-}
-
-.navbar a.projects-link::before {
-    content: "Projects";
-}
-
-.navbar a.certifications-link::before {
-    content: "Certifications";
-}
-
-.navbar a.contact-link::before {
-    content: "Contact";
-}
-
-/* Adjust view-cv hover effect */
-.hero .view-cv:hover {
-    background-color: #80deea;
-    color: #004d40;
-    transform: scale(1.1); /* Slight zoom effect on hover */
-    border-radius: 30px; /* Ensure rounded rectangle */
 }
 
 /* Footer */
