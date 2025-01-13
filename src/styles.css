@@ -477,6 +477,10 @@ a:hover {
     background: #333;
     padding: 15px 20px;
     flex-wrap: wrap; /* Allow wrapping of items */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 
 .navbar a {
