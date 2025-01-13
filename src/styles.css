@@ -509,6 +509,10 @@ a:hover {
     margin: 4px 0;
 }
 
+.navbar.active .hamburger div {
+    background-color: #007bff; /* Change color when active */
+}
+
 /* Responsive Navbar */
 @media screen and (max-width: 1024px) {
     .navbar {
@@ -520,18 +524,12 @@ a:hover {
         margin: 10px 0;
         width: 100%; /* Ensure full width for better spacing */
         text-align: center; /* Center align text */
-        padding: 10px 0; /* Add padding for better touch targets */
     }
 }
-
 @media screen and (max-width: 768px) {
-    .navbar a {
-        font-size: 1em; /* Adjust font size for smaller screens */
-        padding: 8px 10px; /* Adjust padding for smaller screens */
-    }
-
-    .hamburger {
-        display: flex;
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .navbar a {
@@ -539,9 +537,15 @@ a:hover {
     }
 
     .navbar.active a {
-        display: inline-block;
-        margin: 0 5px; /* Minimal space between items */
-        padding: 8px 10px;
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
     }
 }
 
@@ -549,19 +553,53 @@ a:hover {
     .navbar {
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .navbar a {
-        margin: 0 5px; /* Minimal space between items */
-        padding: 8px 5px; /* Adjust padding for smaller screens */
-        font-size: 0.9em; /* Adjust font size for smaller screens */
-        display: inline-block; /* Ensure links are displayed inline */
+        display: none;
+    }
+
+    .navbar.active a {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
     }
 
     .hamburger {
         display: flex;
     }
+}
+
+/* Add page names to the navbar */
+.navbar a.home-link::before {
+    content: "Home";
+}
+
+.navbar a.about-link::before {
+    content: "About";
+}
+
+.navbar a.interests-link::before {
+    content: "Interests";
+}
+
+.navbar a.publications-link::before {
+    content: "Publications";
+}
+
+.navbar a.projects-link::before {
+    content: "Projects";
+}
+
+.navbar a.certifications-link::before {
+    content: "Certifications";
+}
+
+.navbar a.contact-link::before {
+    content: "Contact";
 }
 
 /* Footer */
