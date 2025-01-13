@@ -470,6 +470,7 @@ a:hover {
     color: #004d40;
     text-align: justify; /* Justified alignment for content */
 }
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -554,6 +555,11 @@ a:hover {
         text-align: center; /* Center align text */
         padding: 8px 0; /* Add padding for better touch targets */
         font-size: 0.9em; /* Adjust font size for smaller screens */
+        display: block; /* Ensure links are displayed */
+    }
+
+    .hamburger {
+        display: flex;
     }
 }
 
