@@ -14,6 +14,7 @@ html, body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 body, html {
@@ -469,7 +470,6 @@ a:hover {
     color: #004d40;
     text-align: justify; /* Justified alignment for content */
 }
-
 /* Navbar */
 .navbar {
     display: flex;
@@ -481,6 +481,8 @@ a:hover {
     top: 0;
     z-index: 1000;
     width: 100%;
+    overflow: hidden; /* Prevent overflow */
+}
 }
 
 .navbar a {
