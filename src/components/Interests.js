@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles.css';
 
-const ResearchInterests = () => {
+const Interests = () => {
     const interests = [
         { 
             title: "Network Security", 
@@ -60,5 +60,4 @@ const ResearchInterests = () => {
     );
 };
 
-export default ResearchInterests;
-
+export default Interests;

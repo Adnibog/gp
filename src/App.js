@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
-import ResearchInterests from './components/ResearchInterests';
+import Interests from './components/Interests';
 import Publications from './components/Publications';
 import Certifications from './components/Certifications';
 import Projects from './components/Projects';
@@ -20,7 +20,7 @@ function App() {
                     <Route path="/" exact component={Home} />
                     <Route path="/gp" exact component={Home} />
                     <Route path="/about" component={About} />
-                    <Route path="/research-interests" component={ResearchInterests} />
+                    <Route path="/interests" component={Interests} />
                     <Route path="/publications" component={Publications} />
                     <Route path="/certifications" component={Certifications} />
                     <Route path="/projects" component={Projects} />
