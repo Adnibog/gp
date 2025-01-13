@@ -496,20 +496,20 @@ a:hover {
     text-decoration: underline;
 }
 
-.hamburger {
+.navbar-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
 
-.hamburger div {
+.navbar-toggle .bar {
     width: 25px;
     height: 3px;
     background-color: white;
     margin: 4px 0;
 }
 
-.navbar.active .hamburger div {
+.navbar-links.active .bar {
     background-color: #007bff; /* Change color when active */
 }
 
@@ -528,48 +528,48 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .navbar a {
         display: none;
     }
-
-    .navbar.active a {
+    
+    .navbar-toggle {
+        display: flex;
+    }
+    
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar-links.active {
+        display: flex;
+    }
+    
+    .navbar-links.active a {
         display: block;
         margin: 10px 0;
         width: 100%;
         text-align: center;
         padding: 10px 0;
-    }
-
-    .hamburger {
-        display: flex;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .navbar a {
         display: none;
     }
 
-    .navbar.active a {
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-links.active a {
         display: block;
         margin: 10px 0;
         width: 100%;
         text-align: center;
         padding: 10px 0;
-    }
-
-    .hamburger {
-        display: flex;
     }
 }
 
