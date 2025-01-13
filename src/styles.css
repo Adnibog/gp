@@ -539,23 +539,24 @@ a:hover {
     }
 
     .navbar.active a {
-        display: block;
+        display: inline-block;
+        margin: 0 5px; /* Minimal space between items */
+        padding: 8px 10px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: center;
     }
 
     .navbar a {
-        margin: 5px 0;
-        width: 100%; /* Ensure full width for better spacing */
-        text-align: center; /* Center align text */
-        padding: 8px 0; /* Add padding for better touch targets */
+        margin: 0 5px; /* Minimal space between items */
+        padding: 8px 5px; /* Adjust padding for smaller screens */
         font-size: 0.9em; /* Adjust font size for smaller screens */
-        display: block; /* Ensure links are displayed */
+        display: inline-block; /* Ensure links are displayed inline */
     }
 
     .hamburger {
