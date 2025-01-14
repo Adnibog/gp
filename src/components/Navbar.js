@@ -11,11 +11,14 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div className="navbar-toggle hamburger" onClick={toggleMenu}>
+            {/* Hamburger Icon */}
+            <div className="hamburger" onClick={toggleMenu}>
                 <span className="bar"></span>
                 <span className="bar"></span>
                 <span className="bar"></span>
             </div>
+
+            {/* Navbar Links */}
             <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
@@ -30,3 +33,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

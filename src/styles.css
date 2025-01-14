@@ -470,6 +470,74 @@ a:hover {
     color: #004d40;
     text-align: justify; /* Justified alignment for content */  
 }
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    justify-content: space-between;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Mobile View - Navbar Links */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;  /* Show hamburger icon on small screens */
+    }
+
+    /* Initially, the navbar links are hidden in mobile view */
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Adjust the position based on your navbar height */
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar-links.active {
+        display: flex; /* When 'active' class is added, the links are displayed */
+    }
+
+    .navbar-links a {
+        display: block;
+        margin: 10px;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.2em;
+        color: white;
+        background-color: #333;
+    }
+
+    .navbar-links a:hover {
+        background-color: #444;
+    }
+}
 
 /* Footer */
 .footer {
@@ -783,110 +851,6 @@ footer {
 
     .certification img {
         width: 50px; /* Adjust logo size for smaller screens */
-    }
-}
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #333;
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-}
-
-.navbar .navbar-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: auto;
-}
-
-.navbar .navbar-links a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.2em;
-    text-decoration: none;
-}
-
-.navbar .navbar-links a:hover {
-    text-decoration: underline;
-}
-
-/* Hamburger Menu */
-.hamburger {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    cursor: pointer;
-    width: 30px;  /* Adjust size */
-    height: 24px; /* Adjust size */
-    justify-content: space-between;  /* Space out the bars */
-}
-
-.hamburger .bar {
-    width: 100%;
-    height: 4px;  /* Thickness of the bars */
-    background-color: white;
-    margin: 3px 0; /* Space between bars */
-}
-
-/* Responsive Navbar (Mobile View) */
-@media screen and (max-width: 768px) {
-    /* Show the hamburger on small screens */
-    .hamburger {
-        display: flex; /* Show hamburger icon on small screens */
-    }
-
-    /* Navbar Links - Hidden by default */
-    .navbar-links {
-        display: none;
-        flex-direction: column;  /* Ensure links are vertical */
-        align-items: center;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px; /* Position below the navbar */
-        left: 0;
-        z-index: 999;
-    }
-
-    /* When the menu is active, show the links */
-    .navbar-links.active {
-        display: flex;
-    }
-
-    /* Style the links when the menu is active */
-    .navbar-links a {
-        display: block;
-        margin: 10px;
-        width: 100%;  /* Links should take full width */
-        text-align: center;
-        padding: 10px 0;
-        font-size: 1.2em;
-        color: white; /* Ensure links are visible */
-    }
-
-    .navbar-links a:hover {
-        background-color: #444; /* Add hover effect for mobile links */
-    }
-}
-
-/* Desktop View (Links visible and aligned horizontally) */
-@media screen and (min-width: 769px) {
-    .navbar-links {
-        display: flex; /* Links are always visible and aligned horizontally on desktop */
-        flex-direction: row;
-        justify-content: flex-end;
-        width: auto;
-    }
-
-    .navbar-links a {
-        margin: 0 15px;
-        padding: 0;
-        display: inline; /* Ensure links are inline */
     }
 }
 
