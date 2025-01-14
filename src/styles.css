@@ -130,6 +130,55 @@ a:hover {
     color: #004d40;
 }
 
+/* Responsive Design for Hero Section */
+@media screen and (max-width: 1024px) {
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero .view-cv {
+        font-size: 1.2em;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero .view-cv {
+        font-size: 1em;
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content {
+        padding: 10px;
+    }
+
+    .hero .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero .view-cv {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
+}
+
 /* About Section */
 .about-container {
     display: flex;
@@ -208,7 +257,6 @@ a:hover {
         font-size: 1em;
     }
 }
-
 /* General Section Styles (Education and Experience sections) */
 section {
     padding: 20px;
@@ -244,7 +292,6 @@ section .section-item {
 section .section-item p {
     margin: 5px 0;
 }
-
 /* Education Section */
 .education {
     font-size: 1em; /* Ensure font size consistency */
@@ -295,35 +342,35 @@ section .section-item p {
 
 /* Responsive Design for Education and Experience Section */
 @media screen and (max-width: 1024px) {
-    section .section-grid {
+    .education-grid, .experience-grid {
         grid-template-columns: 1fr;
     }
 
-    section .section-item {
-        font-size: 0.95em;
+    .education-item, .experience-item {
+        font-size: 1em; /* Ensure font size consistency */
     }
 }
 
 @media screen and (max-width: 768px) {
-    section .section-item {
+    .education-item, .experience-item {
         padding: 15px;
-        font-size: 0.9em;
+        font-size: 1em; /* Ensure font size consistency */
     }
 
-    section {
+    .education, .experience {
         padding: 15px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    section {
+    .education, .experience {
         padding: 10px;
-        font-size: 0.85em;
+        font-size: 1em; /* Ensure font size consistency */
     }
 
-    section .section-item {
+    .education-item, .experience-item {
         padding: 10px;
-        font-size: 0.85em;
+        font-size: 1em; /* Ensure font size consistency */
     }
 }
 
@@ -1130,6 +1177,7 @@ h1 {
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     display: inline-block; /* Ensure the button is centered */
     animation: pulse 2s infinite;
+    width: fit-content; /* Ensure the button width is just enough to cover the text */
 }
 
 .hero .view-cv:hover {
@@ -1141,8 +1189,9 @@ h1 {
 /* Responsive Design for View CV */
 @media screen and (max-width: 480px) {
     .hero .view-cv {
-        font-size: 1.2em;
-        padding: 8px 16px;
+        font-size: 1.2em; /* Adjust font size for mobile view */
+        padding: 8px 16px; /* Adjust padding for mobile view */
+        width: fit-content; /* Ensure the button width is just enough to cover the text */
     }
 }
 
@@ -1166,9 +1215,9 @@ h1 {
 /* Responsive Design for CV Link */
 @media screen and (max-width: 480px) {
     .cv-link {
-        padding: 8px 16px;
-        font-size: 1em;
-        width: 100%; /* Ensure the link covers the full width */
+        padding: 12px 24px; /* Increase padding for mobile view */
+        font-size: 1.2em; /* Increase font size for mobile view */
+        width: fit-content; /* Ensure the link covers the full width */
         box-sizing: border-box; /* Include padding and border in the element's total width and height */
     }
 }
@@ -1210,8 +1259,8 @@ h1 {
 /* Responsive Design for CV Link */
 @media screen and (max-width: 480px) {
     .cv .cv-link {
-        padding: 8px 16px;
-        font-size: 1em;
+        padding: 12px 24px; /* Increase padding for mobile view */
+        font-size: 1.2em; /* Increase font size for mobile view */
     }
 }
 /* Responsive Design for Entire Webpage */
