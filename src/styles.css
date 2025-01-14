@@ -631,50 +631,51 @@ footer {
         font-size: 0.8em;
     }
 }
-/* Publications */
+/* Publications Section */
 .publications {
     padding: 20px;
-    background: #ffffff;
+    background: #ffffff; /* White background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
     margin: 20px auto;
+    text-align: center;
 }
 
 .publications h2 {
-    font-size: 2em; /* Adjusted section title font size */
-    color: #004d40;
-    text-align: center;
+    font-size: 2em; /* Consistent section title font size */
+    color: #004d40; /* Darker text color */
     margin-bottom: 20px;
 }
 
 .publications-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Column grid layout */
+    gap: 20px; /* Add space between items */
 }
 
 .publication-item {
-    background: #fff;
+    background: #ffffff; /* White background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Left-aligned text */
 }
 
 .publication-title h3 {
-    color: #004d40;
+    color: #004d40; /* Darker text color */
+    margin-bottom: 10px;
+    font-size: 1.5em; /* Consistent font size with other sections */
+}
+
+.publication-journal h4 {
+    color: #555; /* Slightly lighter text color */
     margin-bottom: 10px;
     font-size: 1.2em; /* Adjusted font size */
 }
 
-.publication-journal h4 {
-    color: #555;
-    margin-bottom: 10px;
-    font-size: 1em; /* Adjusted font size */
-}
-
 .publication-link a {
-    color: #007bff;
+    color: #007bff; /* Link color */
     text-decoration: none;
 }
 
@@ -683,16 +684,21 @@ footer {
 }
 
 .publication-abstract p {
-    color: #333;
+    color: #333; /* Darker text color */
     margin-top: 10px;
-    font-size: 1em; /* Adjusted font size */
+    font-size: 1.2em; /* Adjusted font size */
     line-height: 1.6;
-    text-align: justify;
+    text-align: justify; /* Justified alignment for content */
 }
 
+/* Responsive Design for Publications Section */
 @media screen and (max-width: 1024px) {
     .publications {
         padding: 20px;
+    }
+
+    .publications-grid {
+        grid-template-columns: 1fr;
     }
 
     .publication-item {
@@ -702,15 +708,15 @@ footer {
 
 @media screen and (max-width: 768px) {
     .publication-title h3 {
-        font-size: 1.1em; /* Adjusted font size */
+        font-size: 1.3em; /* Adjust font size for smaller screens */
     }
 
     .publication-journal h4 {
-        font-size: 0.9em; /* Adjusted font size */
+        font-size: 1.1em; /* Adjust font size */
     }
 
     .publication-abstract p {
-        font-size: 0.9em; /* Adjusted font size */
+        font-size: 1.1em; /* Adjust font size */
     }
 }
 
@@ -724,15 +730,15 @@ footer {
     }
 
     .publication-title h3 {
-        font-size: 1em; /* Adjusted font size */
+        font-size: 1.2em; /* Adjust font size */
     }
 
     .publication-journal h4 {
-        font-size: 0.8em; /* Adjusted font size */
+        font-size: 1em; /* Adjust font size */
     }
 
     .publication-abstract p {
-        font-size: 0.8em; /* Adjusted font size */
+        font-size: 1em; /* Adjust font size */
     }
 }
 
