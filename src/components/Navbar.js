@@ -11,21 +11,19 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div className="navbar-container">
-                <div className="navbar-toggle" onClick={toggleMenu}>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                </div>
-                <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
-                    <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/interests">Interests</Link>
-                    <Link to="/publications">Publications</Link>
-                    <Link to="/projects">Projects</Link>
-                    <Link to="/certifications">Certifications</Link>
-                    <Link to="/contact">Contact</Link>
-                </div>
+            <div className="navbar-toggle hamburger" onClick={toggleMenu}>
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+            </div>
+            <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/interests">Interests</Link>
+                <Link to="/publications">Publications</Link>
+                <Link to="/projects">Projects</Link>
+                <Link to="/certifications">Certifications</Link>
+                <Link to="/contact">Contact</Link>
             </div>
         </nav>
     );
