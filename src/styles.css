@@ -84,14 +84,14 @@ a:hover {
 .hero {
     background: #ffffff; /* White background */
     color: #004d40;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
     background: #ffffff; /* White background */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -114,11 +114,11 @@ a:hover {
 }
 
 .hero .view-cv {
-    font-size: 1.5em;
+    font-size: 1.5em; /* Adjusted font size */
     font-weight: bold;
     margin-top: 20px;
     text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: 2px solid #80deea;
     border-radius: 30px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -135,7 +135,7 @@ a:hover {
 /* Responsive Design for Hero Section */
 @media screen and (max-width: 1024px) {
     .hero-content {
-        padding: 20px;
+        padding: 30px 20px;
     }
 
     .hero .profile-img {
@@ -144,8 +144,8 @@ a:hover {
     }
 
     .hero .view-cv {
-        font-size: 1.2em;
-        padding: 8px 16px;
+        font-size: 1.3em;
+        padding: 12px 24px;
     }
 }
 
@@ -160,8 +160,8 @@ a:hover {
     }
 
     .hero .view-cv {
-        font-size: 1em;
-        padding: 6px 12px;
+        font-size: 1.1em;
+        padding: 10px 20px;
     }
 }
 
@@ -176,8 +176,8 @@ a:hover {
     }
 
     .hero .view-cv {
-        font-size: 0.9em;
-        padding: 5px 10px;
+        font-size: 1em;
+        padding: 8px 16px;
     }
 }
 
@@ -449,7 +449,7 @@ section .section-item p {
 }
 
 .skills h2 {
-    font-size: 2.5em; /* Consistent section title font size */
+    font-size: 2em; /* Consistent section title font size */
     color: #004d40; /* Darker text color */
     margin-bottom: 20px;
 }
@@ -659,8 +659,8 @@ footer {
 }
 
 .publications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Column grid layout */
+    display: flex;
+    flex-direction: column; /* Stack items one over the other */
     gap: 20px; /* Add space between items */
 }
 
@@ -705,14 +705,6 @@ footer {
 @media screen and (max-width: 1024px) {
     .publications {
         padding: 20px;
-    }
-
-    .publications-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .publication-item {
-        width: 100%;
     }
 
     .publication-title h3 {
