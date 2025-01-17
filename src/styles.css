@@ -448,6 +448,12 @@ section .section-item p {
     text-align: center;
 }
 
+.skills h2 {
+    font-size: 2.5em; /* Consistent section title font size */
+    color: #004d40; /* Darker text color */
+    margin-bottom: 20px;
+}
+
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -494,6 +500,10 @@ section .section-item p {
     .skill-card {
         flex: 1 1 100%;
         max-width: 100%;
+    }
+
+    .skills h2 {
+        font-size: 2em; /* Adjust font size for mobile view */
     }
 }
 
@@ -643,7 +653,7 @@ footer {
 }
 
 .publications h2 {
-    font-size: 2em; /* Consistent section title font size */
+    font-size: 2.5em; /* Consistent section title font size */
     color: #004d40; /* Darker text color */
     margin-bottom: 20px;
 }
@@ -704,9 +714,7 @@ footer {
     .publication-item {
         width: 100%;
     }
-}
 
-@media screen and (max-width: 768px) {
     .publication-title h3 {
         font-size: 1.3em; /* Adjust font size for smaller screens */
     }
@@ -720,6 +728,20 @@ footer {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .publication-title h3 {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+
+    .publication-journal h4 {
+        font-size: 1em; /* Adjust font size */
+    }
+
+    .publication-abstract p {
+        font-size: 1em; /* Adjust font size */
+    }
+}
+
 @media screen and (max-width: 480px) {
     .publications {
         padding: 10px;
@@ -730,15 +752,15 @@ footer {
     }
 
     .publication-title h3 {
-        font-size: 1.2em; /* Adjust font size */
+        font-size: 1em; /* Adjust font size */
     }
 
     .publication-journal h4 {
-        font-size: 1em; /* Adjust font size */
+        font-size: 0.9em; /* Adjust font size */
     }
 
     .publication-abstract p {
-        font-size: 1em; /* Adjust font size */
+        font-size: 0.9em; /* Adjust font size */
     }
 }
 
