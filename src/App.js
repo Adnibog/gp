@@ -13,12 +13,11 @@ import './styles.css';
 
 function App() {
     return (
-        <Router basename="/gp">
+        <Router>
             <div className="App">
                 <Navbar />
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/gp" exact component={Home} />
                     <Route path="/about" component={About} />
                     <Route path="/interests" component={Interests} />
                     <Route path="/publications" component={Publications} />
@@ -33,3 +32,4 @@ function App() {
 }
 
 export default App;
+
