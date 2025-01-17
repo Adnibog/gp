@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -13,7 +13,7 @@ import './styles.css';
 
 function App() {
     return (
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router>{}
             <div className="App">
                 <Navbar />
                 <Switch>
