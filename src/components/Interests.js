@@ -5,43 +5,43 @@ const Interests = () => {
     const interests = [
         { 
             title: "Network Security", 
-            description: "Protecting networks from unauthorized access, misuse, malfunction, modification, destruction, or improper disclosure."
+            description: "Protecting networks from unauthorized access, misuse, malfunction, modification, destruction, or improper disclosure through policies and procedures."
         },
         { 
             title: "IoT Security", 
-            description: "Ensuring the security of Internet of Things devices and networks."
+            description: "Ensuring the security of IoT devices and networks by protecting data they collect, transmit, and store, and ensuring user privacy and safety."
+        },
+        { 
+            title: "Hardware Security", 
+            description: "Securing physical devices and hardware components from tampering and unauthorized access using measures like secure boot and hardware encryption."
         },
         { 
             title: "Machine Learning", 
-            description: "Developing algorithms that allow computers to learn from and make predictions on data."
+            description: "Developing algorithms that enable computers to learn from data and make predictions or decisions without explicit programming."
         },
         { 
-            title: "Embedded Systems Security", 
-            description: "Securing embedded systems, which are dedicated computer systems designed for specific tasks."
+            title: "CyberThreat Intelligence", 
+            description: "Gathering and analyzing information about cyber threats to help organizations understand, anticipate, and mitigate risks."
         },
         { 
             title: "Vulnerability Detection", 
-            description: "Identifying and addressing security vulnerabilities in software and hardware."
+            description: "Identifying and addressing security vulnerabilities in systems, applications, and networks using tools and techniques to discover weaknesses."
         },
         { 
             title: "Side-Channel Analysis", 
-            description: "Analyzing information that can be gathered from the physical implementation of a computer system."
+            description: "Analyzing information from the physical implementation of systems, such as power consumption or electromagnetic emissions, to uncover security vulnerabilities."
         },
         { 
             title: "Cryptography", 
-            description: "Securing communication through the use of codes so that only the intended recipients can read the information."
-        },
-        { 
-            title: "Data Privacy", 
-            description: "Ensuring that personal data is collected, stored, and processed in a way that protects the privacy of individuals."
+            description: "Securing communication through codes and ciphers to protect information from unauthorized access, ensuring data confidentiality, integrity, and authenticity."
         },
         { 
             title: "Blockchain Analytics", 
-            description: "Analyzing blockchain data to gain insights and ensure security."
+            description: "Analyzing blockchain data to gain insights, ensure security, examine transaction patterns, identify suspicious activities, and understand participant behavior."
         },
         { 
             title: "Cloud Security", 
-            description: "Protecting data, applications, and infrastructures involved in cloud computing."
+            description: "Protecting data and applications in cloud environments from cyber threats by implementing encryption, access controls, and monitoring to safeguard resources."
         }
     ];
 
