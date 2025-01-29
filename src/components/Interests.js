@@ -20,7 +20,7 @@ const Interests = () => {
             description: "Developing algorithms that enable computers to learn from data and make predictions or decisions without explicit programming."
         },
         { 
-            title: "CyberThreat Intelligence", 
+            title: "Cyber Threat Intelligence", 
             description: "Gathering and analyzing information about cyber threats to help organizations understand, anticipate, and mitigate risks."
         },
         { 
