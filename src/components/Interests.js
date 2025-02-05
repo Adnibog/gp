@@ -8,10 +8,6 @@ const Interests = () => {
             description: "Protecting networks from unauthorized access, misuse, malfunction, modification, destruction, or improper disclosure through policies and procedures."
         },
         { 
-            title: "IoT Security", 
-            description: "Ensuring the security of IoT devices and networks by protecting data they collect, transmit, and store, and ensuring user privacy and safety."
-        },
-        { 
             title: "Hardware Security", 
             description: "Securing physical devices and hardware components from tampering and unauthorized access using measures like secure boot and hardware encryption."
         },
@@ -20,8 +16,16 @@ const Interests = () => {
             description: "Developing algorithms that enable computers to learn from data and make predictions or decisions without explicit programming."
         },
         { 
-            title: "Cyber Threat Intelligence", 
-            description: "Gathering and analyzing information about cyber threats to help organizations understand, anticipate, and mitigate risks."
+            title: "Human and Computer Vision", 
+            description: "Enabling computers to interpret and make decisions based on visual data, and understanding how humans perceive and process visual information."
+        },
+        { 
+            title: "Remote Sensing", 
+            description: "Collecting and analyzing data from a distance, typically using satellite or aerial imagery, to monitor and assess environmental and geographical conditions."
+        },
+        { 
+            title: "Optical Imaging", 
+            description: "Using light and optics to capture detailed images of objects, often for medical, scientific, or industrial applications."
         },
         { 
             title: "Vulnerability Detection", 
@@ -30,18 +34,6 @@ const Interests = () => {
         { 
             title: "Side-Channel Analysis", 
             description: "Analyzing information from the physical implementation of systems, such as power consumption or electromagnetic emissions, to uncover security vulnerabilities."
-        },
-        { 
-            title: "Cryptography", 
-            description: "Securing communication through codes and ciphers to protect information from unauthorized access, ensuring data confidentiality, integrity, and authenticity."
-        },
-        { 
-            title: "Blockchain Analytics", 
-            description: "Analyzing blockchain data to gain insights, ensure security, examine transaction patterns, identify suspicious activities, and understand participant behavior."
-        },
-        { 
-            title: "Cloud Security", 
-            description: "Protecting data and applications in cloud environments from cyber threats by implementing encryption, access controls, and monitoring to safeguard resources."
         }
     ];
 
