@@ -8,8 +8,8 @@ const Interests = () => {
             description: "Protecting networks from unauthorized access, misuse, malfunction, modification, destruction, or improper disclosure through policies and procedures."
         },
         { 
-            title: "Hardware Security", 
-            description: "Securing physical devices and hardware components from tampering and unauthorized access using measures like secure boot and hardware encryption."
+            title: "IoT Security", 
+            description: "Securing Internet of Things (IoT) devices and networks to protect against vulnerabilities and attacks."
         },
         { 
             title: "Machine Learning", 
@@ -20,20 +20,24 @@ const Interests = () => {
             description: "Enabling computers to interpret and make decisions based on visual data, and understanding how humans perceive and process visual information."
         },
         { 
-            title: "Remote Sensing", 
-            description: "Collecting and analyzing data from a distance, typically using satellite or aerial imagery, to monitor and assess environmental and geographical conditions."
-        },
-        { 
-            title: "Optical Imaging", 
-            description: "Using light and optics to capture detailed images of objects, often for medical, scientific, or industrial applications."
+            title: "Robotics", 
+            description: "Designing and building robots and automated systems to perform tasks in various environments."
         },
         { 
             title: "Vulnerability Detection", 
             description: "Identifying and addressing security vulnerabilities in systems, applications, and networks using tools and techniques to discover weaknesses."
         },
         { 
+            title: "Cyber Threat Intelligence", 
+            description: "Gathering and analyzing information about current and potential cyber threats to improve security measures."
+        },
+        { 
             title: "Side-Channel Analysis", 
             description: "Analyzing information from the physical implementation of systems, such as power consumption or electromagnetic emissions, to uncover security vulnerabilities."
+        },
+        { 
+            title: "Remote Sensing", 
+            description: "Collecting and analyzing data from a distance, typically using satellite or aerial imagery, to monitor and assess environmental and geographical conditions."
         }
     ];
 
