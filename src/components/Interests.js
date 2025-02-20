@@ -32,8 +32,8 @@ const Interests = () => {
             description: "Identifying and addressing security vulnerabilities in systems, applications, and networks using tools and techniques to discover weaknesses."
         },
         { 
-            title: "Side-Channel Analysis", 
-            description: "Investigating timing side channels to understand how variations in the time it takes to execute cryptographic algorithms can leak sensitive information, and exploring cache side channels to study how cache access patterns can be exploited to extract confidential data from computing systems."
+            title: "Side-Channel Analysis",
+            description: "Investigating how timing and cache side channels in cryptographic algorithms can leak sensitive information through execution time variations and cache access patterns."
         }
     ];
 
