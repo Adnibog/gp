@@ -12,32 +12,28 @@ const Interests = () => {
             description: "Securing Internet of Things (IoT) devices and networks to protect against vulnerabilities and attacks."
         },
         { 
-            title: "Machine Learning", 
-            description: "Developing algorithms that enable computers to learn from data and make predictions or decisions without explicit programming."
+            title: "Deep Learning", 
+            description: "Exploring deep learning techniques to identify and detect vulnerabilities and threats, aiming to enhance security measures through advanced algorithms."
         },
         { 
-            title: "Human and Computer Vision", 
-            description: "Enabling computers to interpret and make decisions based on visual data, and understanding how humans perceive and process visual information."
+            title: "Adversarial Machine Learning", 
+            description: "Studying techniques to make machine learning models robust against adversarial attacks and ensuring their reliability in hostile environments."
         },
         { 
-            title: "Robotics", 
-            description: "Designing and building robots and automated systems to perform tasks in various environments."
-        },
-        { 
-            title: "Vulnerability Detection", 
-            description: "Identifying and addressing security vulnerabilities in systems, applications, and networks using tools and techniques to discover weaknesses."
+            title: "Malware Analysis", 
+            description: "Analyzing and understanding malicious software to develop effective defenses and mitigation strategies."
         },
         { 
             title: "Cyber Threat Intelligence", 
             description: "Gathering and analyzing information about current and potential cyber threats to improve security measures."
         },
         { 
-            title: "Side-Channel Analysis", 
-            description: "Analyzing information from the physical implementation of systems, such as power consumption or electromagnetic emissions, to uncover security vulnerabilities."
+            title: "Vulnerability Detection", 
+            description: "Identifying and addressing security vulnerabilities in systems, applications, and networks using tools and techniques to discover weaknesses."
         },
         { 
-            title: "Remote Sensing", 
-            description: "Collecting and analyzing data from a distance, typically using satellite or aerial imagery, to monitor and assess environmental and geographical conditions."
+            title: "Side-Channel Analysis", 
+            description: "Investigating timing side channels to understand how variations in the time it takes to execute cryptographic algorithms can leak sensitive information, and exploring cache side channels to study how cache access patterns can be exploited to extract confidential data from computing systems."
         }
     ];
 
