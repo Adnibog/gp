@@ -45,13 +45,13 @@ const experience = [
 const About = () => {
     return (
         <div className="about-container section">
-            <h2>About Me</h2>
+            <h2>About</h2>
             <div className="description">
                 <p>
-                    I come from Mirmi, Syangja, a beautiful and peaceful place in western Nepal. I love learning new things and want to make a positive impact on society. I am inspired by the quote, "Don't aspire to make a living, aspire to make a difference." This guides my actions and goals. I believe in teamwork, as the saying goes, "If you want to go fast, go alone; but if you want to go far, go together." This belief drives my commitment to working with others and achieving collective success.
+                    Coming from Mirmi, Syangja, a beautiful and peaceful place in western Nepal, I am passionate about learning new things and making a positive impact on society. Inspired by the quote, "Don't aspire to make a living, aspire to make a difference," this philosophy guides my actions and goals. I value teamwork, as reflected in the saying, "If you want to go fast, go alone; but if you want to go far, go together," which drives my commitment to collaboration and collective success.
                 </p>
                 <p>
-                    I have many interests that show my varied personality. I love music, which inspires and relaxes me. I enjoy playing sports like cricket and soccer, which keep me active and connected with others. Cooking is another passion of mine, allowing me to be creative and share happiness through food. I also enjoy writing and reading literature, as they help me express myself and learn new things. I am interested in philosophy, which makes me think about life's big questions, and meditation, which brings me peace and mindfulness.
+                    My interests are diverse, including a love for music that inspires and relaxes me, playing sports like cricket and soccer for activity and connection, and a passion for cooking that encourages creativity and sharing happiness through food. Writing and reading literature provide avenues for expression and learning, while an interest in philosophy encourages reflection on life's big questions. Meditation brings peace and mindfulness.
                 </p>
             </div>
             <h3>Education</h3>
