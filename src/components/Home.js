@@ -17,14 +17,14 @@ const skills = [
 const Home = () => {
     return (
         <div className="home">
-            <section className="hero">
+            <section id="home" className="hero">
                 <div className="hero-content">
                     <img src={`${process.env.PUBLIC_URL}/pp.jpg`} alt="Gobinda Pandey" className="profile-photo" />
                     <h1>Gobinda Pandey</h1>
                     <h2>PhD in Computing and Information Sciences</h2>
                     <p>Exploring Secure Technologies for a Better Tomorrow.</p>
                     <p>With a strong background in electronics, communication, and information, and a passion for cybersecurity, I am dedicated to advancing the field through innovative research and practical applications.</p>
-                    <a href={`${process.env.PUBLIC_URL}/cv.pdf`} className="cv-link" target="_blank" rel="noopener noreferrer">View CV</a>
+                    <a href={`${process.env.PUBLIC_URL}/cv.pdf`} className="resume-link" target="_blank" rel="noopener noreferrer">View Resume</a>
                 </div>
             </section>
             <section className="skills section">
