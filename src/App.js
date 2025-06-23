@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -13,23 +12,18 @@ import './styles.css';
 
 function App() {
     return (
-        <Router>
-            <div className="App">
-                <Navbar />
-                <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/about" component={About} />
-                    <Route path="/interests" component={Interests} />
-                    <Route path="/publications" component={Publications} />
-                    <Route path="/certifications" component={Certifications} />
-                    <Route path="/projects" component={Projects} />
-                    <Route path="/contact" component={Contact} />
-                </Switch>
-                <Footer />
-            </div>
-        </Router>
+        <div className="App">
+            <Navbar />
+            <section id="home"><Home /></section>
+            <section id="about"><About /></section>
+            <section id="interests"><Interests /></section>
+            <section id="publications"><Publications /></section>
+            <section id="certifications"><Certifications /></section>
+            <section id="projects"><Projects /></section>
+            <section id="contact"><Contact /></section>
+            <Footer />
+        </div>
     );
 }
 
 export default App;
-
