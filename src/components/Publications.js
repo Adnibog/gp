@@ -1,6 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import '../styles.css';
+
+const sectionStyle = {
+  width: "100vw",
+  background: "#fff",
+  display: "flex",
+  justifyContent: "center",
+  margin: "0 auto 48px auto",
+  padding: "0"
+};
+const innerStyle = {
+  width: "100%",
+  maxWidth: 1200,
+  padding: "48px 32px",
+  boxSizing: "border-box"
+};
 
 const publications = [
     {
@@ -20,49 +33,45 @@ const publications = [
         journal: "Journal of Electronics and Informatics, 5(3), 235-252",
         link: "https://doi.org/10.36548/jei.2023.3.001",
         abstract: "The Trek Monitoring System is a comprehensive hardware and software research initiative aimed at ensuring the safety and navigation of trekkers under the purview of Trekking Companies. This system addresses potential health and weather related challenges that may arise during treks, providing trekkers with a reliable guide to reach their destinations safely. The research encompasses a user friendly website offering essential information on various locations, detailed itineraries, and real time weather forecasts. Additionally, a specially designed hardware gadget, comprising a Temperature Sensor, Pulse Sensor, Arduino, LCD I2C Display, NodeMCU, and GPS Module, presents trekkers with instant temperature and pulse data while transmitting the same, along with precise GPS location, to the website. This facilitates continuous monitoring by Trekking Companies, enabling prompt assistance whenever necessary. The system further ensures regular assessment of trekker’s health conditions, contributing to timely search and rescue operations when it is necessary. By providing an efficient and secure trekking environment encompassing weather forecasts, location tracking, and health monitoring, the Trek Monitoring System promotes a seamless and protected trekking experience."
-    },
-    // Add more publications as needed
+    }
 ];
 
-const PublicationItem = ({ title, journal, link, abstract }) => (
-    <div className="publication-item">
-        <div className="publication-title">
-            <h3>{title}</h3>
-        </div>
-        <div className="publication-journal">
-            <h4>{journal}</h4>
-        </div>
-        <div className="publication-link">
-            <a href={link} target="_blank" rel="noopener noreferrer">Read Full Paper</a>
-        </div>
-        <div className="publication-abstract">
-            <p>{abstract}</p>
-        </div>
-    </div>
-);
-
-PublicationItem.propTypes = {
-    title: PropTypes.string.isRequired,
-    journal: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    abstract: PropTypes.string.isRequired,
+const cardStyle = {
+    background: "#f8f8f8",
+    borderRadius: 10,
+    boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+    padding: 24,
+    margin: "16px 0"
 };
 
 const Publications = () => (
-    <div className="publications section">
-        <h2>Publications</h2>
-        <div className="publications-grid">
-            {publications.map((pub, index) => (
-                <PublicationItem
-                    key={index}
-                    title={pub.title}
-                    journal={pub.journal}
-                    link={pub.link}
-                    abstract={pub.abstract}
-                />
+    <section id="publications" style={sectionStyle}>
+        <div style={innerStyle}>
+            <h2 style={{ fontSize: "2em", marginBottom: 32, textAlign: "center" }}>Publications</h2>
+            {publications.map((pub, idx) => (
+                <div key={idx} style={cardStyle}>
+                    <h3 style={{ margin: "0 0 8px 0" }}>{pub.title}</h3>
+                    <h4 style={{ color: "#555", margin: "0 0 8px 0" }}>{pub.journal}</h4>
+                    <a href={pub.link} target="_blank" rel="noopener noreferrer" style={{ color: "#007bff", fontWeight: 600, marginBottom: 8, display: "inline-block" }}>Read Full Paper</a>
+                    <p style={{ margin: 0, textAlign: "justify" }}>{pub.abstract}</p>
+                </div>
             ))}
         </div>
-    </div>
-);
-
-export default Publications;
+        <style>
+            {`
+            @media (max-width: 900px) {
+                #publications > div {
+                    padding: 32px 12px !important;
+                }
+            }
+            @media (max-width: 600px) {
+                #publications > div {
+                    padding: 24px 4px !important;
+                }
+            }
+            `}
+        </style>
+        </section>
+    );
+    
+    export default Publications;

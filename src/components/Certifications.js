@@ -1,5 +1,19 @@
 import React from 'react';
-import '../styles.css';
+
+const sectionStyle = {
+  width: "100vw",
+  background: "#fff",
+  display: "flex",
+  justifyContent: "center",
+  margin: "0 auto 48px auto",
+  padding: "0"
+};
+const innerStyle = {
+  width: "100%",
+  maxWidth: 1200,
+  padding: "48px 32px",
+  boxSizing: "border-box"
+};
 
 const certificationsData = [
     {
@@ -53,25 +67,64 @@ const certificationsData = [
     },
 ];
 
-const Certification = ({ title, institution, completionDate, details, logo }) => (
-    <div className="certification">
-        <img src={logo} alt={`${institution} logo`} className="certification-logo" />
-        <h3>{title}</h3>
-        <p><strong>Institution:</strong> {institution}</p>
-        <p><strong>Completion Date:</strong> {completionDate}</p>
-        <p>{details}</p>
-    </div>
-);
+const cardStyle = {
+    background: "#f8f8f8",
+    borderRadius: 10,
+    boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+    padding: 24,
+    margin: "16px 0",
+    display: "flex",
+    alignItems: "flex-start",
+    gap: 20
+};
+
+const logoStyle = {
+    width: 60,
+    height: 60,
+    objectFit: "contain",
+    borderRadius: 8,
+    marginRight: 16
+};
 
 const Certifications = () => (
-    <div className="certifications section">
-        <h2>Certifications</h2>
-        <div className="certifications-grid">
-            {certificationsData.map((cert, index) => (
-                <Certification key={index} {...cert} />
+    <section id="certifications" style={sectionStyle}>
+        <div style={innerStyle}>
+            <h2 style={{ fontSize: "2em", marginBottom: 32, textAlign: "center" }}>Certifications</h2>
+            {certificationsData.map((cert, idx) => (
+                <div key={idx} style={cardStyle} className="certification-card">
+                    <img src={cert.logo} alt={`${cert.institution} logo`} style={logoStyle} />
+                    <div>
+                        <h3 style={{ margin: "0 0 8px 0" }}>{cert.title}</h3>
+                        <div style={{ color: "#555", marginBottom: 4 }}><strong>Institution:</strong> {cert.institution}</div>
+                        <div style={{ color: "#888", marginBottom: 4 }}><strong>Completion Date:</strong> {cert.completionDate}</div>
+                        <div style={{ fontSize: "1em", textAlign: "justify" }}>{cert.details}</div>
+                    </div>
+                </div>
             ))}
         </div>
-    </div>
+        <style>
+            {`
+            @media (max-width: 900px) {
+                #certifications > div {
+                    padding: 32px 12px !important;
+                }
+            }
+            @media (max-width: 600px) {
+                #certifications > div {
+                    padding: 24px 4px !important;
+                }
+                #certifications img {
+                    width: 40px !important;
+                    height: 40px !important;
+                }
+                #certifications .certification-card {
+                    flex-direction: column !important;
+                    gap: 12px !important;
+                }
+            }
+            `}
+        </style>
+    </section>
 );
 
 export default Certifications;
