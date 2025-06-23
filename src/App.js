@@ -1,8 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './components/Home';
-import About from './components/About';
+import Profile from './components/Profile';
 import Interests from './components/Interests';
 import Publications from './components/Publications';
 import Certifications from './components/Certifications';
@@ -14,8 +13,7 @@ function App() {
     return (
         <div className="App">
             <Navbar />
-            <section id="home"><Home /></section>
-            <section id="about"><About /></section>
+            <section id="profile"><Profile /></section>
             <section id="interests"><Interests /></section>
             <section id="publications"><Publications /></section>
             <section id="certifications"><Certifications /></section>

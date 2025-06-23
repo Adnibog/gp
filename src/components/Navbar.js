@@ -12,6 +12,7 @@ const Navbar = () => {
         };
 
         window.addEventListener('hashchange', handleHashChange);
+
         // Scroll to section on initial load if hash is present
         if (window.location.hash) {
             handleHashChange();
@@ -35,8 +36,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-links">
-                <a href="#home" onClick={(e) => scrollToSection(e, 'home')}>Home</a>
-                <a href="#about" onClick={(e) => scrollToSection(e, 'about')}>About</a>
+                <a href="#profile" onClick={(e) => scrollToSection(e, 'profile')}>About Me</a>
                 <a href="#interests" onClick={(e) => scrollToSection(e, 'interests')}>Interests</a>
                 <a href="#publications" onClick={(e) => scrollToSection(e, 'publications')}>Publications</a>
                 <a href="#projects" onClick={(e) => scrollToSection(e, 'projects')}>Projects</a>
