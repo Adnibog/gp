@@ -11,14 +11,16 @@ import './styles.css';
 
 function App() {
     return (
-        <div className="App">
+        <div className="app-container">
             <Navbar />
-            <section id="profile"><Profile /></section>
-            <section id="interests"><Interests /></section>
-            <section id="publications"><Publications /></section>
-            <section id="certifications"><Certifications /></section>
-            <section id="projects"><Projects /></section>
-            <section id="contact"><Contact /></section>
+            <main className="main-content">
+                <section id="profile" className="section"><Profile /></section>
+                <section id="interests" className="section"><Interests /></section>
+                <section id="publications" className="section"><Publications /></section>
+                <section id="certifications" className="section"><Certifications /></section>
+                <section id="projects" className="section"><Projects /></section>
+                <section id="contact" className="section"><Contact /></section>
+            </main>
             <Footer />
         </div>
     );

@@ -1,35 +1,37 @@
 import React from 'react';
 
 const sectionStyle = {
-  width: "100vw",
-  background: "#fff",
-  display: "flex",
-  justifyContent: "center",
-  margin: "0 auto 48px auto",
-  padding: "0"
+    width: "100vw",
+    background: "#fff",
+    display: "flex",
+    justifyContent: "center",
+    margin: "0 auto 3rem auto",
+    padding: "0"
 };
 const innerStyle = {
-  width: "100%",
-  maxWidth: 1200,
-  padding: "48px 32px",
-  boxSizing: "border-box"
+    width: "100%",
+    maxWidth: 1200,
+    padding: "3rem 2rem",
+    boxSizing: "border-box"
 };
 
 const cardStyle = {
     background: "#f8f8f8",
     borderRadius: 10,
     boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-    padding: 20,
-    margin: "16px 0",
+    padding: "1.25rem",
+    margin: "1rem 0",
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
-    gap: 24
+    gap: "1.5rem",
+    minWidth: 0
 };
 
 const imageStyle = {
-    width: 180,
-    height: 120,
+    width: "180px",
+    maxWidth: "40vw",
+    height: "120px",
     objectFit: "cover",
     borderRadius: 8,
     flexShrink: 0
@@ -38,7 +40,8 @@ const imageStyle = {
 const detailsStyle = {
     flex: 1,
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    minWidth: 0
 };
 
 const projects = [
@@ -72,13 +75,13 @@ const projects = [
 const Projects = () => (
     <section id="projects" style={sectionStyle}>
         <div style={innerStyle}>
-            <h2 style={{ fontSize: "2em", marginBottom: 32, textAlign: "center" }}>Projects</h2>
+            <h2 style={{ fontSize: "2em", marginBottom: "2rem", textAlign: "center" }}>Projects</h2>
             {projects.map((project, idx) => (
                 <div key={idx} style={cardStyle} className="project-card">
                     <img src={project.image} alt={project.title} style={imageStyle} />
                     <div style={detailsStyle}>
-                        <h3 style={{ margin: "0 0 8px 0" }}>{project.title}</h3>
-                        <p style={{ margin: 0 }}>{project.description}</p>
+                        <h3 style={{ margin: "0 0 0.5rem 0", fontSize: "1.2em" }}>{project.title}</h3>
+                        <p style={{ margin: 0, fontSize: "1em" }}>{project.description}</p>
                     </div>
                 </div>
             ))}
@@ -87,17 +90,39 @@ const Projects = () => (
             {`
             @media (max-width: 900px) {
                 #projects > div {
-                    padding: 32px 12px !important;
+                    padding: 2rem 0.5rem !important;
+                }
+                .project-card {
+                    gap: 1rem !important;
                 }
             }
             @media (max-width: 600px) {
                 #projects > div > .project-card {
                     flex-direction: column !important;
-                    gap: 12px !important;
+                    gap: 0.75rem !important;
+                    padding: 1rem !important;
                 }
                 #projects img {
                     width: 100% !important;
+                    max-width: 100% !important;
                     height: auto !important;
+                }
+                #projects h2 {
+                    font-size: 1.5em !important;
+                }
+                #projects h3 {
+                    font-size: 1em !important;
+                }
+                #projects p {
+                    font-size: 0.95em !important;
+                }
+            }
+            @media (max-width: 400px) {
+                #projects > div {
+                    padding: 1rem 0.25rem !important;
+                }
+                #projects h2 {
+                    font-size: 1.1em !important;
                 }
             }
             `}
