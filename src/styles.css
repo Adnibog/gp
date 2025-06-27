@@ -182,6 +182,73 @@ section,
     align-items: flex-start;
 }
 
+/* =========================
+    Section Styles (Override for Consistency)
+   ========================= */
+.about-container,
+.description,
+.education,
+.experience,
+.hobbies,
+.skills,
+.certifications,
+.contact-container,
+.cv,
+.research-interests,
+.publications {
+    font-size: var(--font-size-base);
+    /* Ensure consistent font size */
+}
+
+.about-container *,
+.description *,
+.education *,
+.experience *,
+.hobbies *,
+.skills *,
+.certifications *,
+.contact-container *,
+.cv *,
+.research-interests *,
+.publications * {
+    font-size: inherit;
+    /* Inherit font size for all children */
+}
+
+/* Ensure headings in all sections use the correct font sizes */
+.about-container h1, .about-container h2, .about-container h3,
+.description h1, .description h2, .description h3,
+.education h1, .education h2, .education h3,
+.experience h1, .experience h2, .experience h3,
+.hobbies h1, .hobbies h2, .hobbies h3,
+.skills h1, .skills h2, .skills h3,
+.certifications h1, .certifications h2, .certifications h3,
+.contact-container h1, .contact-container h2, .contact-container h3,
+.cv h1, .cv h2, .cv h3,
+.research-interests h1, .research-interests h2, .research-interests h3,
+.publications h1, .publications h2, .publications h3 {
+    font-size: unset;
+    /* Remove any inherited font-size overrides */
+}
+
+/* If projects and certifications have special font-size, match others to them */
+section,
+.about-container,
+.description,
+.education,
+.experience,
+.hobbies,
+.skills,
+.projects-container,
+.certifications,
+.contact-container,
+.cv,
+.research-interests,
+.publications {
+    font-size: var(--font-size-base);
+}
+
+/* Section spacing */
 section:not(:last-child) {
     margin-bottom: 2rem;
 }
