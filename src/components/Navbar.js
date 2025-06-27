@@ -38,9 +38,9 @@ const Navbar = () => {
             <div className="navbar-links">
                 <a href="#profile" onClick={(e) => scrollToSection(e, 'profile')}>About Me</a>
                 <a href="#interests" onClick={(e) => scrollToSection(e, 'interests')}>Interests</a>
+                <a href="#certifications" onClick={(e) => scrollToSection(e, 'certifications')}>Certifications</a>
                 <a href="#publications" onClick={(e) => scrollToSection(e, 'publications')}>Publications</a>
                 <a href="#projects" onClick={(e) => scrollToSection(e, 'projects')}>Projects</a>
-                <a href="#certifications" onClick={(e) => scrollToSection(e, 'certifications')}>Certifications</a>
                 <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>Contact</a>
             </div>
         </nav>

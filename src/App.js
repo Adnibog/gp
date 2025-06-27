@@ -16,8 +16,8 @@ function App() {
             <main className="main-content">
                 <section id="profile" className="section"><Profile /></section>
                 <section id="interests" className="section"><Interests /></section>
-                <section id="publications" className="section"><Publications /></section>
                 <section id="certifications" className="section"><Certifications /></section>
+                <section id="publications" className="section"><Publications /></section>
                 <section id="projects" className="section"><Projects /></section>
                 <section id="contact" className="section"><Contact /></section>
             </main>

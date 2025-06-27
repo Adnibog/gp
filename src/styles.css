@@ -8,10 +8,23 @@
     --font-main: 'Roboto', sans-serif;
     --max-width: 1200px;
     --transition: 0.3s ease;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --font-size-base: 1rem;
+    --font-size-small: 0.95rem;
 }
 
-/* Reset and base styles */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* =========================
+    Reset and Base Styles
+   ========================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html, body {
     min-height: 100%;
@@ -20,30 +33,37 @@ html, body {
     color: var(--primary);
     line-height: 1.6;
     overflow-x: hidden;
+    font-size: var(--font-size-base);
+    width: 100vw;
 }
 
 body {
     padding-top: 72px; /* Height of navbar */
     min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 #root, .App, .home {
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
 }
 
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 2rem 2rem;
     flex: 1;
     width: 100%;
+    box-sizing: border-box;
 }
 
 /* =========================
     Navbar
-    ========================= */
+   ========================= */
 .navbar {
     position: fixed;
     top: 0;
@@ -56,6 +76,7 @@ body {
     align-items: center;
     padding: 1rem 2rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    min-width: 100vw;
 }
 
 .navbar .navbar-links {
@@ -67,7 +88,7 @@ body {
 
 .navbar .navbar-links a {
     color: #fff;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     padding: 0.5rem 1rem;
     transition: background var(--transition);
     border-radius: 6px;
@@ -93,34 +114,33 @@ body {
         padding: 0.5rem 0.5rem;
     }
     .navbar .navbar-links a {
-        font-size: 0.95rem;
+        font-size: var(--font-size-small);
         padding: 0.4rem 0.7rem;
     }
 }
 
 /* =========================
     Typography
-    ========================= */
+   ========================= */
 h1, h2, h3 {
     color: var(--primary);
     margin-bottom: 1rem;
     font-weight: 700;
     word-break: break-word;
+    text-align: left;
 }
 
 h1 {
-    font-size: 2.5rem;
-    text-align: center;
+    font-size: var(--font-size-h1);
     animation: fadeIn 2s;
 }
 
 h2 {
-    font-size: 2rem;
-    text-align: center;
+    font-size: var(--font-size-h2);
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: var(--font-size-h3);
 }
 
 a {
@@ -134,7 +154,7 @@ a:hover {
 
 /* =========================
     Section Styles
-    ========================= */
+   ========================= */
 section,
 .about-container,
 .description,
@@ -152,20 +172,82 @@ section,
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     margin: 2rem auto;
-    padding: 2rem 1.5rem;
+    padding: 2rem 2rem;
     max-width: var(--max-width);
     width: 100%;
     box-sizing: border-box;
+    font-size: var(--font-size-base);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 section:not(:last-child) {
     margin-bottom: 2rem;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* Consistent Typography in Sections */
+section h1, section h2, section h3,
+.about-container h1, .about-container h2, .about-container h3,
+.description h1, .description h2, .description h3,
+.education h1, .education h2, .education h3,
+.experience h1, .experience h2, .experience h3,
+.hobbies h1, .hobbies h2, .hobbies h3,
+.skills h1, .skills h2, .skills h3,
+.projects-container h1, .projects-container h2, .projects-container h3,
+.certifications h1, .certifications h2, .certifications h3,
+.contact-container h1, .contact-container h2, .contact-container h3,
+.cv h1, .cv h2, .cv h3,
+.research-interests h1, .research-interests h2, .research-interests h3,
+.publications h1, .publications h2, .publications h3 {
+    font-size: inherit;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+/* Paragraphs and lists left-aligned for content */
+section p, section ul, section ol,
+.about-container p, .about-container ul, .about-container ol,
+.description p, .description ul, .description ol,
+.education p, .education ul, .education ol,
+.experience p, .experience ul, .experience ol,
+.hobbies p, .hobbies ul, .hobbies ol,
+.skills p, .skills ul, .skills ol,
+.projects-container p, .projects-container ul, .projects-container ol,
+.certifications p, .certifications ul, .certifications ol,
+.contact-container p, .contact-container ul, .contact-container ol,
+.cv p, .cv ul, .cv ol,
+.research-interests p, .research-interests ul, .research-interests ol,
+.publications p, .publications ul, .publications ol {
+    text-align: left;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/* Remove extra margin for last child */
+section > *:last-child,
+.about-container > *:last-child,
+.description > *:last-child,
+.education > *:last-child,
+.experience > *:last-child,
+.hobbies > *:last-child,
+.skills > *:last-child,
+.projects-container > *:last-child,
+.certifications > *:last-child,
+.contact-container > *:last-child,
+.cv > *:last-child,
+.research-interests > *:last-child,
+.publications > *:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================
+    Responsive Design
+   ========================= */
+@media (max-width: 1400px) {
     .container,
-    .hero-content,
     section,
     .about-container,
     .description,
@@ -179,19 +261,42 @@ section:not(:last-child) {
     .cv,
     .research-interests,
     .publications {
+        max-width: 98vw;
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container,
+    section,
+    .about-container,
+    .description,
+    .education,
+    .experience,
+    .hobbies,
+    .skills,
+    .projects-container,
+    .certifications,
+    .contact-container,
+    .cv,
+    .research-interests,
+    .publications {
+        max-width: 100vw;
         padding: 1.2rem 1rem;
     }
     .navbar .navbar-links {
         gap: 1rem;
     }
+    :root {
+        --font-size-h1: 2rem;
+        --font-size-h2: 1.5rem;
+        --font-size-h3: 1.2rem;
+        --font-size-base: 0.98rem;
+    }
 }
 
 @media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
-    h3 { font-size: 1.2rem; }
     .container,
-    .hero-content,
     section,
     .about-container,
     .description,
@@ -205,16 +310,23 @@ section:not(:last-child) {
     .cv,
     .research-interests,
     .publications {
+        max-width: 100vw;
         padding: 1rem 0.7rem;
+        margin: 1rem 0;
     }
     .navbar {
         padding: 0.7rem 1rem;
+    }
+    :root {
+        --font-size-h1: 1.7rem;
+        --font-size-h2: 1.2rem;
+        --font-size-h3: 1rem;
+        --font-size-base: 0.96rem;
     }
 }
 
 @media (max-width: 480px) {
     .container,
-    .hero-content,
     section,
     .about-container,
     .description,
@@ -228,32 +340,36 @@ section:not(:last-child) {
     .cv,
     .research-interests,
     .publications {
-        padding: 0.7rem 0.3rem;
+        max-width: 100vw;
+        padding: 0.7rem 0.2rem;
         margin: 0.5rem 0;
     }
-    h1 { font-size: 1.5rem; }
-    h2 { font-size: 1.2rem; }
-    h3 { font-size: 1rem; }
     .navbar {
         padding: 0.5rem 0.5rem;
     }
     .navbar .navbar-links a {
-        font-size: 0.95rem;
+        font-size: var(--font-size-small);
         padding: 0.4rem 0.7rem;
+    }
+    :root {
+        --font-size-h1: 1.3rem;
+        --font-size-h2: 1.05rem;
+        --font-size-h3: 0.95rem;
+        --font-size-base: 0.93rem;
     }
 }
 
 /* =========================
     Footer
-    ========================= */
+   ========================= */
 .footer, footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 0.75rem 0;
-    width: 100%;
+    width: 100vw;
     margin-top: auto;
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     position: relative;
     bottom: 0;
     left: 0;
@@ -262,11 +378,12 @@ section:not(:last-child) {
 
 /* =========================
     Animations
-    ========================= */
+   ========================= */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
 @keyframes pulse {
     0%, 100% { transform: scale(1);}
     50% { transform: scale(1.05);}
