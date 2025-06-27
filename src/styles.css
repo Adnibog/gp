@@ -1,160 +1,147 @@
 :root {
-    --primary: #004d40;
-    --secondary: #007bff;
-    --accent: #80deea;
-    --bg: #fff;
-    --shadow: 0 4px 8px rgba(0,0,0,0.1);
-    --radius: 10px;
-    --font-main: 'Roboto', sans-serif;
+    /* Color Palette */
+    --color-primary: #004d40;
+    --color-secondary: #007bff;
+    --color-accent: #80deea;
+    --color-bg: #fff;
+    --color-navbar-bg: #222;
+    --color-footer-bg: #222;
+    --color-navbar-link: #fff;
+
+    /* Shadows & Radius */
+    --shadow: 0 4px 24px rgba(0,0,0,0.10);
+    --radius: clamp(10px, 1.5vw, 20px);
+
+    /* Font Family */
+    --font-main: 'Roboto', 'Segoe UI', Arial, sans-serif;
+
+    /* Fluid Typography */
+    --font-size-h1: clamp(2.2rem, 4vw + 1rem, 3.5rem);
+    --font-size-h2: clamp(1.5rem, 2.5vw + 1rem, 2.5rem);
+    --font-size-h3: clamp(1.2rem, 1.5vw + 1rem, 1.7rem);
+    --font-size-base: clamp(1.08rem, 1vw + 0.98rem, 1.18rem);
+    --font-size-small: clamp(0.98rem, 0.7vw + 0.9rem, 1.05rem);
+
+    /* Fluid Spacing */
+    --space-section: clamp(1.2rem, 3vw, 3.5rem);
+    --space-container: clamp(1rem, 2vw, 2.5rem);
+    --space-navbar-v: clamp(0.7rem, 1vw, 1.5rem);
+    --space-navbar-h: clamp(1rem, 3vw, 3rem);
+
+    /* Layout */
     --max-width: 1200px;
-    --transition: 0.3s ease;
-    --font-size-h1: 2.5rem;
-    --font-size-h2: 2rem;
-    --font-size-h3: 1.5rem;
-    --font-size-base: 1rem;
-    --font-size-small: 0.95rem;
+    --transition: 0.3s cubic-bezier(.4,0,.2,1);
 }
 
 /* =========================
-    Reset and Base Styles
+        Reset & Base
    ========================= */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
+html {
     box-sizing: border-box;
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-size: 100%;
 }
 
-html, body {
-    min-height: 100%;
-    font-family: var(--font-main);
-    background: var(--bg);
-    color: var(--primary);
-    line-height: 1.6;
-    overflow-x: hidden;
-    font-size: var(--font-size-base);
-    width: 100vw;
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    padding-top: 72px; /* Height of navbar */
     min-height: 100vh;
+    width: 100vw;
+    font-family: var(--font-main);
+    background: var(--color-bg);
+    color: var(--color-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    padding-top: 72px; /* Adjust to match navbar height */
+}
+
+#root, .App, .home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     overflow-x: hidden;
 }
 
-#root, .App, .home {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100vw;
-}
-
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2rem 2rem;
-    flex: 1;
-    width: 100%;
-    box-sizing: border-box;
+/* Prevent horizontal scroll on all devices */
+html, body, #root, .App, .home {
+    max-width: 100vw;
+    overflow-x: hidden !important;
 }
 
 /* =========================
-    Navbar
+        Navbar (Fixed)
    ========================= */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
+    background: var(--color-navbar-bg);
+    color: var(--color-navbar-link);
     z-index: 1000;
-    background: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: var(--space-navbar-v) var(--space-navbar-h);
+    box-shadow: var(--shadow);
     min-width: 100vw;
+    transition: padding var(--transition), background var(--transition);
+    font-size: var(--font-size-base);
+    user-select: none;
 }
 
 .navbar .navbar-links {
     display: flex;
-    gap: 2rem;
+    gap: clamp(0.7rem, 2vw, 2.2rem);
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .navbar .navbar-links a {
-    color: #fff;
-    font-size: var(--font-size-base);
-    padding: 0.5rem 1rem;
-    transition: background var(--transition);
-    border-radius: 6px;
+    color: var(--color-navbar-link);
+    font-size: inherit;
+    padding: 0.5em 1.2em;
+    border-radius: var(--radius);
+    transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+    text-decoration: none;
+    font-weight: 500;
+    outline: none;
+    position: relative;
+    letter-spacing: 0.01em;
+}
+
+.navbar .navbar-links a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    background: var(--color-accent);
+    color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(128,222,234,0.2);
 }
 
 .navbar .navbar-links a:hover {
-    background: var(--accent);
-    color: var(--primary);
-    text-decoration: underline;
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0.7rem 1rem;
-    }
-    .navbar .navbar-links {
-        gap: 1rem;
-    }
-}
-@media (max-width: 480px) {
-    .navbar {
-        padding: 0.5rem 0.5rem;
-    }
-    .navbar .navbar-links a {
-        font-size: var(--font-size-small);
-        padding: 0.4rem 0.7rem;
-    }
-}
-
-/* =========================
-    Typography
-   ========================= */
-h1, h2, h3 {
-    color: var(--primary);
-    margin-bottom: 1rem;
-    font-weight: 700;
-    word-break: break-word;
-    text-align: left;
-}
-
-h1 {
-    font-size: var(--font-size-h1);
-    animation: fadeIn 2s;
-}
-
-h2 {
-    font-size: var(--font-size-h2);
-}
-
-h3 {
-    font-size: var(--font-size-h3);
-}
-
-a {
-    color: var(--secondary);
-    text-decoration: none;
-    transition: color var(--transition);
-}
-a:hover {
+    background: var(--color-accent);
+    color: var(--color-primary);
     text-decoration: underline;
 }
 
 /* =========================
-    Unified Section Styles
+        Container & Section
    ========================= */
+.container,
 section,
 .about-container,
 .description,
@@ -168,11 +155,11 @@ section,
 .cv,
 .research-interests,
 .publications {
-    background: var(--bg);
+    background: var(--color-bg);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    margin: 2rem auto;
-    padding: 2rem 2rem;
+    margin: var(--space-section) auto;
+    padding: var(--space-container);
     max-width: var(--max-width);
     width: 100%;
     box-sizing: border-box;
@@ -180,26 +167,40 @@ section,
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: padding var(--transition), margin var(--transition), box-shadow var(--transition);
+    font-family: var(--font-main); /* Ensure font consistency */
+    color: var(--color-primary);   /* Ensure color consistency */
 }
 
-/* Ensure all sections/pages have the same font size and heading style */
-section,
-.about-container,
-.description,
-.education,
-.experience,
-.hobbies,
-.skills,
-.projects-container,
-.certifications,
-.contact-container,
-.cv,
-.research-interests,
-.publications {
-    font-size: var(--font-size-base);
+/* Unified font size and font family for all children */
+.container *, section *, .about-container *, .description *, .education *, .experience *, .hobbies *, .skills *, .projects-container *, .certifications *, .contact-container *, .cv *, .research-interests *, .publications * {
+    font-size: inherit !important;
+    font-family: var(--font-main) !important;
+    color: var(--color-primary) !important;
+    line-height: 1.7 !important;
+    letter-spacing: 0.01em !important;
 }
+
+/* =========================
+        Typography
+   ========================= */
+h1, h2, h3 {
+    color: var(--color-primary);
+    font-family: var(--font-main);
+    font-weight: 700;
+    word-break: break-word;
+    text-align: left;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
 
 section h1, section h2, section h3,
+.container h1, .container h2, .container h3,
 .about-container h1, .about-container h2, .about-container h3,
 .description h1, .description h2, .description h3,
 .education h1, .education h2, .education h3,
@@ -212,49 +213,36 @@ section h1, section h2, section h3,
 .cv h1, .cv h2, .cv h3,
 .research-interests h1, .research-interests h2, .research-interests h3,
 .publications h1, .publications h2, .publications h3 {
-    font-size: var(--font-size-h1);
-    font-weight: 700;
-    color: var(--primary);
-    text-align: left;
     margin-bottom: 1rem;
+    font-family: var(--font-main);
+    color: var(--color-primary);
 }
 
-section h2, .about-container h2, .description h2, .education h2, .experience h2, .hobbies h2, .skills h2,
-.projects-container h2, .certifications h2, .contact-container h2, .cv h2, .research-interests h2, .publications h2 {
-    font-size: var(--font-size-h2);
-}
-
-section h3, .about-container h3, .description h3, .education h3, .experience h3, .hobbies h3, .skills h3,
-.projects-container h3, .certifications h3, .contact-container h3, .cv h3, .research-interests h3, .publications h3 {
-    font-size: var(--font-size-h3);
-}
-
-/* All children inherit font size */
-.about-container *, .description *, .education *, .experience *, .hobbies *, .skills *, .projects-container *, .certifications *, .contact-container *, .cv *, .research-interests *, .publications * {
-    font-size: inherit;
-}
-
-/* Paragraphs and lists left-aligned for content */
-section p, section ul, section ol,
-.about-container p, .about-container ul, .about-container ol,
-.description p, .description ul, .description ol,
-.education p, .education ul, .education ol,
-.experience p, .experience ul, .experience ol,
-.hobbies p, .hobbies ul, .hobbies ol,
-.skills p, .skills ul, .skills ol,
-.projects-container p, .projects-container ul, .projects-container ol,
-.certifications p, .certifications ul, .certifications ol,
-.contact-container p, .contact-container ul, .contact-container ol,
-.cv p, .cv ul, .cv ol,
-.research-interests p, .research-interests ul, .research-interests ol,
-.publications p, .publications ul, .publications ol {
+p, ul, ol {
     text-align: left;
     margin-bottom: 1rem;
     width: 100%;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    font-family: var(--font-main);
+    color: var(--color-primary);
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+    font-family: var(--font-main);
+}
+a:hover, a:focus {
+    text-decoration: underline;
+    color: var(--color-primary);
+    outline: none;
 }
 
 /* Remove extra margin for last child */
 section > *:last-child,
+.container > *:last-child,
 .about-container > *:last-child,
 .description > *:last-child,
 .education > *:last-child,
@@ -270,106 +258,88 @@ section > *:last-child,
     margin-bottom: 0;
 }
 
-/* Section spacing */
-section:not(:last-child),
-.about-container:not(:last-child),
-.description:not(:last-child),
-.education:not(:last-child),
-.experience:not(:last-child),
-.hobbies:not(:last-child),
-.skills:not(:last-child),
-.projects-container:not(:last-child),
-.certifications:not(:last-child),
-.contact-container:not(:last-child),
-.cv:not(:last-child),
-.research-interests:not(:last-child),
-.publications:not(:last-child) {
-    margin-bottom: 2rem;
+/* =========================
+        Footer
+   ========================= */
+.footer, footer {
+    background: var(--color-footer-bg);
+    color: #fff;
+    width: 100vw;
+    min-height: clamp(3rem, 6vw, 5rem);
+    margin-top: auto;
+    font-size: var(--font-size-base);
+    position: relative;
+    left: 0; bottom: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    flex-direction: column;
+    gap: 0.3em;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+.footer > *, footer > * {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-main);
 }
 
 /* =========================
-    Responsive Design
+        Responsive Design
    ========================= */
-@media (max-width: 1400px) {
-    .container,
-    section,
-    .about-container,
-    .description,
-    .education,
-    .experience,
-    .hobbies,
-    .skills,
-    .projects-container,
-    .certifications,
-    .contact-container,
-    .cv,
-    .research-interests,
-    .publications {
-        max-width: 98vw;
-        padding: 2rem 1.5rem;
-    }
+@media (max-width: 1200px) {
+    :root { --max-width: 98vw; }
 }
 
-@media (max-width: 1024px) {
-    .container,
-    section,
-    .about-container,
-    .description,
-    .education,
-    .experience,
-    .hobbies,
-    .skills,
-    .projects-container,
-    .certifications,
-    .contact-container,
-    .cv,
-    .research-interests,
-    .publications {
-        max-width: 100vw;
-        padding: 1.2rem 1rem;
-    }
-    .navbar .navbar-links {
-        gap: 1rem;
-    }
+@media (max-width: 900px) {
     :root {
-        --font-size-h1: 2rem;
-        --font-size-h2: 1.5rem;
-        --font-size-h3: 1.2rem;
-        --font-size-base: 0.98rem;
+        --font-size-h1: clamp(1.7rem, 3vw + 1rem, 2.3rem);
+        --font-size-h2: clamp(1.3rem, 2vw + 1rem, 1.7rem);
+        --font-size-h3: clamp(1.1rem, 1vw + 0.9rem, 1.3rem);
+        --max-width: 100vw;
     }
 }
 
 @media (max-width: 768px) {
-    .container,
-    section,
-    .about-container,
-    .description,
-    .education,
-    .experience,
-    .hobbies,
-    .skills,
-    .projects-container,
-    .certifications,
-    .contact-container,
-    .cv,
-    .research-interests,
-    .publications {
-        max-width: 100vw;
-        padding: 1rem 0.7rem;
-        margin: 1rem 0;
+    :root {
+        --space-section: 0.7rem;
+        --space-container: 0.5rem;
+        --radius: 10px;
     }
     .navbar {
-        padding: 0.7rem 1rem;
+        padding: 0.5rem 0.7rem;
+        font-size: var(--font-size-small);
     }
-    :root {
-        --font-size-h1: 1.7rem;
-        --font-size-h2: 1.2rem;
-        --font-size-h3: 1rem;
-        --font-size-base: 0.96rem;
+    .navbar .navbar-links {
+        gap: 0.7rem;
+    }
+    .footer, footer {
+        font-size: var(--font-size-small);
+        min-height: clamp(2.5rem, 8vw, 4rem);
     }
 }
 
 @media (max-width: 480px) {
+    :root {
+        --space-section: 0.3rem;
+        --space-container: 0.3rem;
+        --radius: 8px;
+    }
+    .navbar {
+        padding: 0.3rem 0.3rem;
+        font-size: var(--font-size-small);
+    }
+    .navbar .navbar-links a {
+        padding: 0.3em 0.6em;
+    }
     .container,
     section,
     .about-container,
@@ -384,50 +354,22 @@ section:not(:last-child),
     .cv,
     .research-interests,
     .publications {
-        max-width: 100vw;
-        padding: 0.7rem 0.2rem;
-        margin: 0.5rem 0;
+        margin: 0.2rem 0;
+        padding: var(--space-container);
     }
-    .navbar {
-        padding: 0.5rem 0.5rem;
-    }
-    .navbar .navbar-links a {
+    .footer, footer {
         font-size: var(--font-size-small);
-        padding: 0.4rem 0.7rem;
-    }
-    :root {
-        --font-size-h1: 1.3rem;
-        --font-size-h2: 1.05rem;
-        --font-size-h3: 0.95rem;
-        --font-size-base: 0.93rem;
+        min-height: clamp(2rem, 10vw, 3rem);
     }
 }
 
 /* =========================
-    Footer
-   ========================= */
-.footer, footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 0.75rem 0;
-    width: 100vw;
-    margin-top: auto;
-    font-size: var(--font-size-base);
-    position: relative;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-}
-
-/* =========================
-    Animations
+        Animations
    ========================= */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
 @keyframes pulse {
     0%, 100% { transform: scale(1);}
     50% { transform: scale(1.05);}
