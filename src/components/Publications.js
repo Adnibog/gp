@@ -1,18 +1,18 @@
 import React from 'react';
 
 const sectionStyle = {
-    width: "100vw",
-    background: "#fff",
-    display: "flex",
-    justifyContent: "center",
-    margin: "0 auto 48px auto",
-    padding: "0"
+        width: "100vw",
+        background: "#fff",
+        display: "flex",
+        justifyContent: "center",
+        margin: "0 auto 48px auto",
+        padding: "0"
 };
 const innerStyle = {
-    width: "100%",
-    maxWidth: 1200,
-    padding: "48px 32px",
-    boxSizing: "border-box"
+        width: "100%",
+        maxWidth: 1200,
+        padding: "48px 32px",
+        boxSizing: "border-box"
 };
 
 const publications = [
