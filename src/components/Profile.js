@@ -28,10 +28,10 @@ const skills = [
 
 const education = [
     {
-        institution: 'Rochester Institute of Technology',
-        location: 'Rochester, NY, USA',
-        degree: 'PhD in Computing and Information Sciences',
-        duration: 'Aug 2024 – Present'
+        institution: 'St. Cloud State University',
+        location: 'Saint Cloud, MN, USA',
+        degree: 'MS in Information Assurance',
+        duration: 'Aug 2025 – Present'
     },
     {
         institution: 'Tribhuvan University (Institute of Engineering)',
@@ -45,7 +45,7 @@ const experience = [
     {
         title: 'Graduate Research Assistant',
         description: 'Researched exploring timing attack vectors on different microarchitectures.',
-        duration: 'Aug 2024 – Dec 2024'
+        duration: 'Aug 2024 – May 2025'
     },
     {
         title: 'Teaching Assistant, CSEC 622: Side Channel Analysis',
