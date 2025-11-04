@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faExternalLinkAlt, faShieldAlt, faBrain, faHeartbeat } from '@fortawesome/free-solid-svg-icons';
+import { faShieldAlt, faBrain, faHeartbeat, faRobot, faCar } from '@fortawesome/free-solid-svg-icons';
 
 const sectionStyle = {
     width: "100vw",
@@ -27,8 +27,8 @@ const projects = [
         technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Machine Learning'],
         icon: faShieldAlt,
         color: '#ff6b6b',
-        github: '#',
-        demo: '#'
+        image: '/ids.jpeg',
+        github: null
     },
     {
         title: 'Crotonylation Site Prediction Using Multi-Window Deep Learning',
@@ -37,18 +37,18 @@ const projects = [
         technologies: ['Python', 'PyTorch', 'Deep Learning', 'Bioinformatics', 'Transformers'],
         icon: faBrain,
         color: '#4ecdc4',
-        github: '#',
-        demo: '#'
+        image: '/kcr.png',
+        github: null
     },
     {
         title: 'CNN based System for Automatic Number Plate Recognition',
         year: '2023',
         description: 'Implemented a Convolutional Neural Network-based system for automatic number plate recognition with improved accuracy in vehicle identification systems. Published in Journal of Soft Computing Paradigm.',
         technologies: ['Python', 'TensorFlow', 'OpenCV', 'CNN', 'Image Processing'],
-        icon: faBrain,
+        icon: faCar,
         color: '#45b7d1',
-        github: '#',
-        demo: '#'
+        image: '/ANPR.jpeg',
+        github: 'https://github.com/Adnibog/ANPR'
     },
     {
         title: 'Electronic Health Record Management System using RFID',
@@ -57,18 +57,18 @@ const projects = [
         technologies: ['Arduino', 'RFID', 'IoT', 'Database', 'Healthcare IT'],
         icon: faHeartbeat,
         color: '#f9ca24',
-        github: '#',
-        demo: '#'
+        image: '/smart.jpg',
+        github: null
     },
     {
         title: 'Trek Monitoring System',
         year: '2023',
         description: 'Developed an IoT-based trek monitoring system using Arduino UNO and NodeMCU to enhance safety for outdoor adventurers through real-time tracking and alerts. Published in Journal of Electronics and Informatics.',
         technologies: ['Arduino', 'NodeMCU', 'IoT', 'GPS', 'Real-time Systems'],
-        icon: faShieldAlt,
+        icon: faRobot,
         color: '#fd79a8',
-        github: '#',
-        demo: '#'
+        image: '/trek.png',
+        github: null
     }
 ];
 
@@ -82,39 +82,45 @@ const Projects = () => (
             <div className="projects-grid">
                 {projects.map((project, index) => (
                     <div key={index} className="project-card">
-                        <div className="project-header">
-                            <div className="project-icon-wrapper" style={{ backgroundColor: project.color }}>
-                                <FontAwesomeIcon icon={project.icon} className="project-icon" />
+                        {project.image && (
+                            <div className="project-image-wrapper">
+                                <img 
+                                    src={project.image} 
+                                    alt={project.title}
+                                    className="project-image"
+                                    onError={(e) => {
+                                        e.target.style.display = 'none';
+                                    }}
+                                />
+                                <div className="project-overlay">
+                                    <div className="project-icon-wrapper" style={{ backgroundColor: project.color }}>
+                                        <FontAwesomeIcon icon={project.icon} className="project-icon" />
+                                    </div>
+                                </div>
                             </div>
-                            <span className="project-year">{project.year}</span>
-                        </div>
-                        <h3 className="project-title">{project.title}</h3>
-                        <p className="project-description">{project.description}</p>
-                        <div className="project-tech">
-                            {project.technologies.map((tech, i) => (
-                                <span key={i} className="tech-badge">{tech}</span>
-                            ))}
-                        </div>
-                        <div className="project-links">
+                        )}
+                        <div className="project-content">
+                            <div className="project-header">
+                                <span className="project-year">{project.year}</span>
+                            </div>
+                            <h3 className="project-title">{project.title}</h3>
+                            <p className="project-description">{project.description}</p>
+                            <div className="project-tech">
+                                {project.technologies.map((tech, i) => (
+                                    <span key={i} className="tech-badge">{tech}</span>
+                                ))}
+                            </div>
                             {project.github && (
-                                <a 
-                                    href={project.github} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="project-link"
-                                >
-                                    <FontAwesomeIcon icon={faGithub} /> Code
-                                </a>
-                            )}
-                            {project.demo && (
-                                <a 
-                                    href={project.demo} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="project-link"
-                                >
-                                    <FontAwesomeIcon icon={faExternalLinkAlt} /> Details
-                                </a>
+                                <div className="project-links">
+                                    <a 
+                                        href={project.github} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="project-link"
+                                    >
+                                        <FontAwesomeIcon icon={faGithub} /> View Code
+                                    </a>
+                                </div>
                             )}
                         </div>
                     </div>
@@ -154,7 +160,7 @@ const Projects = () => (
             .project-card {
                 background: rgba(255,255,255,0.95) !important;
                 border-radius: 1.5rem !important;
-                padding: 2rem !important;
+                overflow: hidden;
                 transition: all 0.3s ease !important;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
                 backdrop-filter: blur(10px) !important;
@@ -169,29 +175,69 @@ const Projects = () => (
                 border-top-color: #2575fc !important;
             }
             
+            .project-image-wrapper {
+                width: 100%;
+                height: 220px;
+                position: relative;
+                overflow: hidden;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            }
+            
+            .project-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease !important;
+            }
+            
+            .project-card:hover .project-image {
+                transform: scale(1.1) !important;
+            }
+            
+            .project-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(135deg, rgba(106,17,203,0.7) 0%, rgba(37,117,252,0.7) 100%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.3s ease !important;
+            }
+            
+            .project-card:hover .project-overlay {
+                opacity: 1 !important;
+            }
+            
+            .project-content {
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+            }
+            
             .project-header {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 1.5rem;
+                justify-content: flex-end;
+                margin-bottom: 1rem;
             }
             
             .project-icon-wrapper {
-                width: 60px;
-                height: 60px;
-                border-radius: 15px;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 transition: transform 0.3s ease !important;
-            }
-            
-            .project-card:hover .project-icon-wrapper {
-                transform: scale(1.1) rotate(5deg) !important;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.3) !important;
             }
             
             .project-icon {
-                font-size: 2rem !important;
+                font-size: 2.2rem !important;
                 color: #fff !important;
             }
             
@@ -251,15 +297,15 @@ const Projects = () => (
                 display: inline-flex !important;
                 align-items: center !important;
                 gap: 0.5rem !important;
-                padding: 0.6rem 1.2rem !important;
+                padding: 0.7rem 1.5rem !important;
                 background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%) !important;
                 color: #fff !important;
                 text-decoration: none !important;
-                border-radius: 20px !important;
+                border-radius: 25px !important;
                 font-weight: 600 !important;
                 font-size: 0.9rem !important;
                 transition: all 0.3s ease !important;
-                flex: 1;
+                width: 100%;
                 justify-content: center !important;
             }
             
@@ -276,6 +322,10 @@ const Projects = () => (
                 .projects-grid {
                     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                     gap: 1.5rem;
+                }
+                
+                .project-image-wrapper {
+                    height: 200px;
                 }
             }
             
@@ -296,8 +346,8 @@ const Projects = () => (
                     grid-template-columns: 1fr;
                 }
                 
-                .project-links {
-                    flex-direction: column;
+                .project-image-wrapper {
+                    height: 180px;
                 }
             }
             `}
