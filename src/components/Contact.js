@@ -59,7 +59,7 @@ const Contact = () => {
                                                 <h3 style={{ marginBottom: 12 }}>Contact Details</h3>
                                                 <div style={{ marginBottom: 8 }}><FontAwesomeIcon icon={faPhone} /> (+1)-585-290-2209</div>
                                                 <div style={{ marginBottom: 8 }}><FontAwesomeIcon icon={faEnvelope} /> <a href="mailto:gobindapandey223@gmail.com">gobindapandey223@gmail.com</a></div>
-                                                <div style={{ marginBottom: 8 }}><FontAwesomeIcon icon={faMapMarkerAlt} /> Rochester, NY, USA</div>
+                                                <div style={{ marginBottom: 8 }}><FontAwesomeIcon icon={faMapMarkerAlt} /> St. Cloud, MN, USA</div>
                                                 <div style={{ marginBottom: 8 }}><FontAwesomeIcon icon={faLinkedin} /> <a href="https://www.linkedin.com/in/gobinda-pandey-6b8127185/">gobinda-pandey</a></div>
                                                 <div><FontAwesomeIcon icon={faGithub} /> <a href="https://github.com/Adnibog">Adnibog</a></div>
                                         </div>
