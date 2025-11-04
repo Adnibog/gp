@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faDatabase, faTools, faLaptopCode, faUserShield } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faDatabase, faTools, faLaptopCode, faUserShield, faNetworkWired, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const sectionStyle = {
     width: "100vw",
@@ -19,19 +19,20 @@ const innerStyle = {
 };
 
 const skills = [
-    { name: 'Cybersecurity Tools', details: 'Burp Suite, Cisco Packet Tracer, Kali Linux, NMAP, Metasploit, Wireshark', icon: faUserShield },
-    { name: 'Machine Learning', details: 'PyTorch, Scikit-learn, Keras, NumPy, Pandas, TensorFlow, OpenCV', icon: faLaptopCode },
-    { name: 'Programming Languages', details: 'Python, C, C++, Assembly', icon: faCode },
-    { name: 'Database', details: 'MySQL, MongoDB', icon: faDatabase },
-    { name: 'Miscellaneous', details: 'GNU Assembler, Arduino Uno, OpenWrt, LaTeX, Git', icon: faTools }
+    { name: 'Programming Languages', details: 'Python, C, C++, Bash, Assembly', icon: faCode },
+    { name: 'Data & Machine Learning', details: 'Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch', icon: faLaptopCode },
+    { name: 'Networking & Security', details: 'Wireshark, Nmap, Burp Suite, Nessus, Metasploit, Cisco Packet Tracer', icon: faUserShield },
+    { name: 'Web & Systems', details: 'Linux, Git, HTML, CSS, JavaScript, Flask, Node.js', icon: faGlobe },
+    { name: 'Databases', details: 'MySQL, MongoDB, Oracle', icon: faDatabase },
+    { name: 'Tools & Platforms', details: 'Epic EHR, Microsoft Office Suite, LaTeX, Technical Writing, Collaboration', icon: faTools }
 ];
 
 const education = [
     {
         institution: 'St. Cloud State University',
-        location: 'Saint Cloud, MN, USA',
+        location: 'St. Cloud, MN, USA',
         degree: 'MS in Information Assurance',
-        duration: 'Aug 2025 – Present'
+        duration: 'Aug 2025 – July 2026 (Anticipated)'
     },
     {
         institution: 'Tribhuvan University (Institute of Engineering)',
@@ -43,14 +44,22 @@ const education = [
 
 const experience = [
     {
-        title: 'Graduate Research Assistant',
-        description: 'Researched exploring timing attack vectors on different microarchitectures.',
-        duration: 'Aug 2024 – May 2025'
+        title: 'Patient Access Assistant',
+        organization: 'CentraCare Health System',
+        description: 'Assist patients with registration, insurance verification, and scheduling using Epic EHR software. Maintain accurate and confidential patient data in compliance with HIPAA standards. Collaborate with healthcare staff to ensure secure and efficient patient access workflows.',
+        duration: 'Oct 2025 – Present'
     },
     {
-        title: 'Teaching Assistant, CSEC 622: Side Channel Analysis',
-        description: 'Assisted in course material preparation, student support, and grading.',
-        duration: 'Aug 2024 – Dec 2024'
+        title: 'Production Assistant',
+        organization: 'Huskies Video Production Team',
+        description: 'Support live event streaming, camera operations, and technical setup. Handle audiovisual troubleshooting, data coordination, and ensure smooth production for university media events.',
+        duration: 'Sep 2025 – Present'
+    },
+    {
+        title: 'Graduate Research & Teaching Assistant',
+        organization: 'Rochester Institute of Technology',
+        description: 'Researched processor timing vulnerabilities and mitigation techniques using data-driven analysis. Developed secure monitoring tools and collaborated on research publications. Supported Side-Channel Analysis coursework, created lab content, and guided students on system security and performance testing.',
+        duration: 'Aug 2024 – May 2025'
     }
 ];
 
@@ -59,7 +68,7 @@ const Profile = () => (
         <div style={innerStyle}>
             <div className="profile-header">
                 <img
-                    src="/pp.jpg" // Simplified path - make sure pp.jpg is in public folder
+                    src="/pp.jpg"
                     alt="Gobinda Pandey"
                     className="profile-img"
                     onError={(e) => {
@@ -70,10 +79,10 @@ const Profile = () => (
                 <div className="profile-info">
                     <h1 className="profile-name">Gobinda Pandey</h1>
                     <h2 className="profile-desc">
-                        Cybersecurity enthusiast focused on offensive and defensive security, with a passion for penetration testing and network security. Dedicated to solving real-world challenges and advancing cybersecurity practices, with a strong interest in AI/ML-driven solutions.
+                        Cybersecurity enthusiast focused on cyber physical systems security, with expertise in network security, vulnerability detection, LLM security, and adversarial machine learning. Dedicated to offensive and defensive approaches to protect sensors and AI models.
                     </h2>
                     <a
-                        href="/GP_Resume.pdf" // Simplified path
+                        href="/GP_CV.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="profile-resume"
@@ -116,6 +125,7 @@ const Profile = () => (
                     {experience.map((exp, index) => (
                         <div key={index} className="profile-exp-card">
                             <div className="profile-exp-title">{exp.title}</div>
+                            {exp.organization && <div className="profile-exp-org">{exp.organization}</div>}
                             <div className="profile-exp-desc">{exp.description}</div>
                             <div className="profile-exp-dur">{exp.duration}</div>
                         </div>
@@ -284,10 +294,18 @@ const Profile = () => (
                 margin-bottom: 0.5rem !important;
             }
             
+            .profile-exp-org {
+                font-weight: 500 !important;
+                font-size: 1.05rem !important;
+                color: #007bff !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
             .profile-edu-degree, .profile-exp-desc {
                 font-size: 1rem !important;
                 color: #333 !important;
                 margin-bottom: 0.3rem !important;
+                line-height: 1.6 !important;
             }
             
             .profile-edu-loc {

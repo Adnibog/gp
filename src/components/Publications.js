@@ -1,149 +1,271 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileAlt, faExternalLinkAlt, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 const sectionStyle = {
-        width: "100vw",
-        background: "#fff",
-        display: "flex",
-        justifyContent: "center",
-        margin: "0 auto 48px auto",
-        padding: "0"
+    width: "100vw",
+    background: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    display: "flex",
+    justifyContent: "center",
+    padding: "4rem 2rem",
+    margin: "0 auto 3rem auto",
+    boxSizing: "border-box"
 };
+
 const innerStyle = {
-        width: "100%",
-        maxWidth: 1200,
-        padding: "48px 32px",
-        boxSizing: "border-box"
+    width: "100%",
+    maxWidth: 1200,
+    boxSizing: "border-box"
 };
 
 const publications = [
-        {
-                title: "CNN based System for Automatic Number Plate Recognition",
-                journal: "Journal of Soft Computing Paradigm, 5(4), 347-364",
-                link: "https://doi.org/10.36548/jscp.2023.4.002",
-                abstract: "This study presents a comprehensive approach to Automated Vehicle Number Plate Detection and Recognition, employing image processing and Convolutional Neural Networks (CNNs). The system encompasses two main stages: number plate detection and recognition. Utilizing a digital camera, the system employs image processing to segment the number plate region accurately. A super-resolution method is then applied via CNNs to enhance the image quality. Subsequently, a bounding box method isolates individual characters for precise recognition. In the recognition phase, CNNs extract features for effective classification. The study aims to advance automated vehicle identification systems for law enforcement and parking management applications, promising accurate and efficient number plate detection and recognition. The proposed work has also developed a user interface to ensure the successfulness of the objectives aimed."
-        },
-        {
-                title: "Electronic Health Record Management System using RFID: Improving Efficiency and Accuracy in Healthcare",
-                journal: "Journal of Information Technology and Digital World, 5(3), 274-290",
-                link: "https://doi.org/10.36548/jitdw.2023.3.004",
-                abstract: "This research presents the development and implementation of an Electronic Health Record Management System (EHRMS) using Radio Frequency Identification (RFID) technology. The study discusses the limitations of traditional paper-based health record systems and highlights the benefits of integrating RFID technology in healthcare settings. The EHRMS streamlines patient identification and data capture processes, enhances data accuracy, and improves overall healthcare delivery. Real-time synchronization ensures up-to-date and easily accessible patient records, empowering healthcare providers to make informed decisions and provide timely interventions. The paper concludes with the potential impact of the RFID-based EHRMS in transforming healthcare record management and improving patient outcomes."
-        },
-        {
-                title: "Trek Monitoring System: Enhancing Safety and Adventure in the Outdoors using Arduino UNO and NodeMCU",
-                journal: "Journal of Electronics and Informatics, 5(3), 235-252",
-                link: "https://doi.org/10.36548/jei.2023.3.001",
-                abstract: "The Trek Monitoring System is a comprehensive hardware and software research initiative aimed at ensuring the safety and navigation of trekkers under the purview of Trekking Companies. This system addresses potential health and weather related challenges that may arise during treks, providing trekkers with a reliable guide to reach their destinations safely. The research encompasses a user friendly website offering essential information on various locations, detailed itineraries, and real time weather forecasts. Additionally, a specially designed hardware gadget, comprising a Temperature Sensor, Pulse Sensor, Arduino, LCD I2C Display, NodeMCU, and GPS Module, presents trekkers with instant temperature and pulse data while transmitting the same, along with precise GPS location, to the website. This facilitates continuous monitoring by Trekking Companies, enabling prompt assistance whenever necessary. The system further ensures regular assessment of trekker’s health conditions, contributing to timely search and rescue operations when it is necessary. By providing an efficient and secure trekking environment encompassing weather forecasts, location tracking, and health monitoring, the Trek Monitoring System promotes a seamless and protected trekking experience."
-        }
+    {
+        title: 'CNN based System for Automatic Number Plate Recognition',
+        authors: 'Pandey, G., C, K. K., Lamichhane, N., & Subedi, U.',
+        journal: 'Journal of Soft Computing Paradigm',
+        year: '2023',
+        volume: '5(4)',
+        pages: '347–364',
+        doi: '10.36548/jscp.2023.4.002',
+        url: 'https://doi.org/10.36548/jscp.2023.4.002',
+        abstract: 'This paper presents a CNN-based approach for automatic number plate recognition, demonstrating improved accuracy in vehicle identification systems.'
+    },
+    {
+        title: 'Electronic Health Record Management System using RFID: Improving Efficiency and Accuracy in Healthcare',
+        authors: 'Pandey, G., Sunar, A., Yogi, J., Poudel, N., & Koirala, K. R.',
+        journal: 'Journal of Information Technology and Digital World',
+        year: '2023',
+        volume: '5(3)',
+        pages: '274–290',
+        doi: '10.36548/jitdw.2023.3.004',
+        url: 'https://doi.org/10.36548/jitdw.2023.3.004',
+        abstract: 'This research explores RFID technology implementation in healthcare systems to enhance patient data management and operational efficiency.'
+    },
+    {
+        title: 'Trek Monitoring System: Enhancing Safety and Adventure in the Outdoors using Arduino UNO and NodeMCU',
+        authors: 'Sunar, A., Lamichhane, B., Pandey, G., Yogi, J., & Poudel, N.',
+        journal: 'Journal of Electronics and Informatics',
+        year: '2023',
+        volume: '5(3)',
+        pages: '235–252',
+        doi: '10.36548/jei.2023.3.001',
+        url: 'https://doi.org/10.36548/jei.2023.3.001',
+        abstract: 'This paper introduces an IoT-based trek monitoring system designed to improve safety for outdoor adventurers through real-time tracking and alerts.'
+    }
 ];
 
-const cardStyle = {
-        background: "#f8f8f8",
-        borderRadius: 10,
-        boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-        padding: 24,
-        margin: "16px 0"
-};
-
 const Publications = () => (
-        <section id="publications" style={sectionStyle}>
-                <div style={innerStyle}>
-                        <h2 className="pub-title">Publications</h2>
-                        {publications.map((pub, idx) => (
-                                <div key={idx} className="pub-card" style={cardStyle}>
-                                        <h3 className="pub-card-title">{pub.title}</h3>
-                                        <h4 className="pub-card-journal">{pub.journal}</h4>
-                                        <a href={pub.link} target="_blank" rel="noopener noreferrer" className="pub-card-link">Read Full Paper</a>
-                                        <p className="pub-card-abstract">{pub.abstract}</p>
-                                </div>
-                        ))}
-                </div>
-                <style>
-                        {`
-                        #publications > div {
-                                transition: padding 0.2s;
-                        }
-                        .pub-title {
-                                font-size: 2.2em;
-                                margin-bottom: 32px;
-                                text-align: center;
-                                font-weight: 700;
-                        }
-                        .pub-card-title {
-                                margin: 0 0 8px 0;
-                                font-size: 1.3em;
-                                font-weight: 600;
-                        }
-                        .pub-card-journal {
-                                color: #555;
-                                margin: 0 0 8px 0;
-                                font-size: 1.05em;
-                                font-weight: 500;
-                        }
-                        .pub-card-link {
-                                color: #007bff;
-                                font-weight: 600;
-                                margin-bottom: 8px;
-                                display: inline-block;
-                                font-size: 1em;
-                                text-decoration: underline;
-                        }
-                        .pub-card-abstract {
-                                margin: 0;
-                                text-align: justify;
-                                font-size: 1em;
-                                line-height: 1.6;
-                        }
-                        @media (max-width: 900px) {
-                                #publications > div {
-                                        padding: 32px 12px !important;
-                                }
-                                .pub-title {
-                                        font-size: 1.7em;
-                                }
-                                .pub-card-title {
-                                        font-size: 1.1em;
-                                }
-                                .pub-card-journal,
-                                .pub-card-link,
-                                .pub-card-abstract {
-                                        font-size: 0.97em;
-                                }
-                        }
-                        @media (max-width: 600px) {
-                                #publications > div {
-                                        padding: 20px 2vw !important;
-                                }
-                                .pub-title {
-                                        font-size: 1.2em;
-                                }
-                                .pub-card-title {
-                                        font-size: 1em;
-                                }
-                                .pub-card-journal,
-                                .pub-card-link,
-                                .pub-card-abstract {
-                                        font-size: 0.92em;
-                                }
-                                .pub-card {
-                                        padding: 14px !important;
-                                }
-                        }
-                        @media (max-width: 400px) {
-                                .pub-title {
-                                        font-size: 1em;
-                                }
-                                .pub-card-title {
-                                        font-size: 0.95em;
-                                }
-                                .pub-card-journal,
-                                .pub-card-link,
-                                .pub-card-abstract {
-                                        font-size: 0.85em;
-                                }
-                        }
-                        `}
-                </style>
-        </section>
+    <section id="publications" style={sectionStyle}>
+        <div style={innerStyle}>
+            <h2 className="pub-title">Publications</h2>
+            <p className="pub-subtitle">
+                Peer-reviewed research contributions in computer engineering and information systems
+            </p>
+            <div className="pub-list">
+                {publications.map((pub, index) => (
+                    <div key={index} className="pub-card">
+                        <div className="pub-icon-wrapper">
+                            <FontAwesomeIcon icon={faFileAlt} className="pub-icon" />
+                        </div>
+                        <div className="pub-content">
+                            <h3 className="pub-paper-title">{pub.title}</h3>
+                            <div className="pub-authors">
+                                <FontAwesomeIcon icon={faQuoteLeft} style={{ marginRight: '0.5rem', fontSize: '0.8rem' }} />
+                                {pub.authors}
+                            </div>
+                            <div className="pub-journal">
+                                <strong>{pub.journal}</strong>, {pub.volume}, {pub.pages} ({pub.year})
+                            </div>
+                            <p className="pub-abstract">{pub.abstract}</p>
+                            <div className="pub-links">
+                                <span className="pub-doi">DOI: {pub.doi}</span>
+                                <a 
+                                    href={pub.url} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="pub-link"
+                                >
+                                    View Paper <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+        
+        <style>
+            {`
+            #publications {
+                color: #fff !important;
+            }
+            
+            .pub-title {
+                font-size: 3rem !important;
+                font-weight: 700 !important;
+                text-align: center !important;
+                margin-bottom: 1rem !important;
+                color: #fff !important;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.2) !important;
+            }
+            
+            .pub-subtitle {
+                font-size: 1.2rem !important;
+                text-align: center !important;
+                margin-bottom: 3rem !important;
+                color: rgba(255,255,255,0.9) !important;
+                font-weight: 300 !important;
+            }
+            
+            .pub-list {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .pub-card {
+                background: rgba(255,255,255,0.95) !important;
+                border-radius: 1.5rem !important;
+                padding: 2rem !important;
+                display: flex;
+                gap: 1.5rem;
+                transition: all 0.3s ease !important;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+                backdrop-filter: blur(10px) !important;
+                border-left: 5px solid #4facfe !important;
+            }
+            
+            .pub-card:hover {
+                transform: translateX(10px) !important;
+                box-shadow: 0 15px 40px rgba(0,0,0,0.3) !important;
+                border-left-color: #00f2fe !important;
+            }
+            
+            .pub-icon-wrapper {
+                width: 60px;
+                height: 60px;
+                min-width: 60px;
+                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.3s ease !important;
+            }
+            
+            .pub-card:hover .pub-icon-wrapper {
+                transform: scale(1.1) rotate(-5deg) !important;
+            }
+            
+            .pub-icon {
+                font-size: 1.8rem !important;
+                color: #fff !important;
+            }
+            
+            .pub-content {
+                flex: 1;
+            }
+            
+            .pub-paper-title {
+                font-size: 1.4rem !important;
+                font-weight: 600 !important;
+                margin-bottom: 0.8rem !important;
+                color: #2d3436 !important;
+                line-height: 1.4 !important;
+            }
+            
+            .pub-authors {
+                font-size: 0.95rem !important;
+                color: #636e72 !important;
+                margin-bottom: 0.5rem !important;
+                font-style: italic !important;
+            }
+            
+            .pub-journal {
+                font-size: 0.95rem !important;
+                color: #2d3436 !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .pub-abstract {
+                font-size: 0.95rem !important;
+                color: #636e72 !important;
+                line-height: 1.6 !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .pub-links {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .pub-doi {
+                font-size: 0.85rem !important;
+                color: #636e72 !important;
+                font-family: monospace !important;
+                background: rgba(79,172,254,0.1) !important;
+                padding: 0.3rem 0.8rem !important;
+                border-radius: 5px !important;
+            }
+            
+            .pub-link {
+                display: inline-flex !important;
+                align-items: center !important;
+                gap: 0.5rem !important;
+                padding: 0.6rem 1.5rem !important;
+                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+                color: #fff !important;
+                text-decoration: none !important;
+                border-radius: 25px !important;
+                font-weight: 600 !important;
+                font-size: 0.9rem !important;
+                transition: all 0.3s ease !important;
+            }
+            
+            .pub-link:hover {
+                transform: translateY(-2px) !important;
+                box-shadow: 0 5px 15px rgba(79,172,254,0.4) !important;
+            }
+            
+            @media (max-width: 900px) {
+                .pub-title {
+                    font-size: 2.5rem !important;
+                }
+                
+                .pub-card {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                
+                .pub-icon-wrapper {
+                    align-self: center;
+                }
+            }
+            
+            @media (max-width: 600px) {
+                #publications {
+                    padding: 3rem 1rem !important;
+                }
+                
+                .pub-title {
+                    font-size: 2rem !important;
+                }
+                
+                .pub-subtitle {
+                    font-size: 1rem !important;
+                }
+                
+                .pub-links {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+            `}
+        </style>
+    </section>
 );
 
 export default Publications;

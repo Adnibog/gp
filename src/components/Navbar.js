@@ -1,50 +1,95 @@
-import React, { useEffect } from 'react';
-import '../styles.css';
+import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
-    useEffect(() => {
-        const handleHashChange = () => {
-            const id = window.location.hash.substring(1);
-            const element = document.getElementById(id);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        };
+  const [activeSection, setActiveSection] = useState('profile');
 
-        window.addEventListener('hashchange', handleHashChange);
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['profile', 'interests', 'projects', 'publications', 'certifications', 'awards', 'contact'];
+      const scrollPosition = window.scrollY + 100;
 
-        // Scroll to section on initial load if hash is present
-        if (window.location.hash) {
-            handleHashChange();
-        }
-
-        return () => {
-            window.removeEventListener('hashchange', handleHashChange);
-        };
-    }, []);
-
-    const scrollToSection = (e, sectionId) => {
-        e.preventDefault();
-        const element = document.getElementById(sectionId);
+      for (const section of sections) {
+        const element = document.getElementById(section);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            // Update URL hash without triggering a full page reload
-            window.history.pushState(null, '', `#${sectionId}`);
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+          
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
         }
+      }
     };
 
-    return (
-        <nav className="navbar">
-            <div className="navbar-links">
-                <a href="#profile" onClick={(e) => scrollToSection(e, 'profile')}>About Me</a>
-                <a href="#interests" onClick={(e) => scrollToSection(e, 'interests')}>Interests</a>
-                <a href="#certifications" onClick={(e) => scrollToSection(e, 'certifications')}>Certifications</a>
-                <a href="#publications" onClick={(e) => scrollToSection(e, 'publications')}>Publications</a>
-                <a href="#projects" onClick={(e) => scrollToSection(e, 'projects')}>Projects</a>
-                <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>Contact</a>
-            </div>
-        </nav>
-    );
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-links">
+        <a
+          className={activeSection === 'profile' ? 'active' : ''}
+          onClick={() => scrollToSection('profile')}
+        >
+          Profile
+        </a>
+        <a
+          className={activeSection === 'interests' ? 'active' : ''}
+          onClick={() => scrollToSection('interests')}
+        >
+          Interests
+        </a>
+        <a
+          className={activeSection === 'projects' ? 'active' : ''}
+          onClick={() => scrollToSection('projects')}
+        >
+          Projects
+        </a>
+        <a
+          className={activeSection === 'publications' ? 'active' : ''}
+          onClick={() => scrollToSection('publications')}
+        >
+          Publications
+        </a>
+        <a
+          className={activeSection === 'certifications' ? 'active' : ''}
+          onClick={() => scrollToSection('certifications')}
+        >
+          Certifications
+        </a>
+        <a
+          className={activeSection === 'awards' ? 'active' : ''}
+          onClick={() => scrollToSection('awards')}
+        >
+          Awards
+        </a>
+        <a
+          className={activeSection === 'contact' ? 'active' : ''}
+          onClick={() => scrollToSection('contact')}
+        >
+          Contact
+        </a>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;

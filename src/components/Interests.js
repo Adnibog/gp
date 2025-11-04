@@ -1,95 +1,202 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShieldAlt, faBug, faRobot, faBrain, faNetworkWired, faMicrochip, faSatelliteDish, faLock } from '@fortawesome/free-solid-svg-icons';
 
 const sectionStyle = {
     width: "100vw",
-    background: "#fff",
+    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     display: "flex",
     justifyContent: "center",
-    margin: "0 auto 48px auto",
-    padding: "0"
+    padding: "4rem 2rem",
+    margin: "0 auto 3rem auto",
+    boxSizing: "border-box"
 };
+
 const innerStyle = {
     width: "100%",
     maxWidth: 1200,
-    padding: "48px 32px",
     boxSizing: "border-box"
 };
 
 const interests = [
-        { title: "Network Security", description: "Protecting networks from unauthorized access, misuse, malfunction, modification, destruction, or improper disclosure through policies and procedures." },
-        { title: "IoT Security", description: "Securing Internet of Things (IoT) devices and networks to protect against vulnerabilities and attacks." },
-        { title: "Deep Learning", description: "Exploring deep learning techniques to identify and detect vulnerabilities and threats, aiming to enhance security measures through advanced algorithms." },
-        { title: "Adversarial Machine Learning", description: "Studying techniques to make machine learning models robust against adversarial attacks and ensuring their reliability in hostile environments." },
-        { title: "Malware Analysis", description: "Analyzing and understanding malicious software to develop effective defenses and mitigation strategies." },
-        { title: "Cyber Threat Intelligence", description: "Gathering and analyzing information about current and potential cyber threats to improve security measures." },
-        { title: "Vulnerability Detection", description: "Identifying and addressing security vulnerabilities in systems, applications, and networks using tools and techniques to discover weaknesses." },
-        { title: "Side-Channel Analysis", description: "Investigating how timing and cache side channels in cryptographic algorithms can leak sensitive information through execution time variations and cache access patterns." }
+    {
+        title: 'Vulnerability Detection',
+        description: 'Open source software and hardware vulnerability discovery and analysis',
+        icon: faBug,
+        color: '#ff6b6b'
+    },
+    {
+        title: 'Network Security',
+        description: 'Securing network infrastructures and analyzing network-based attacks',
+        icon: faNetworkWired,
+        color: '#4ecdc4'
+    },
+    {
+        title: 'LLM Security',
+        description: 'Large Language Model security, prompt injection, and AI model vulnerabilities',
+        icon: faBrain,
+        color: '#45b7d1'
+    },
+    {
+        title: 'Adversarial ML',
+        description: 'Adversarial Machine Learning attacks and defense mechanisms',
+        icon: faRobot,
+        color: '#f9ca24'
+    },
+    {
+        title: 'Offensive Security',
+        description: 'Penetration testing, red teaming, and ethical hacking methodologies',
+        icon: faShieldAlt,
+        color: '#fd79a8'
+    },
+    {
+        title: 'Defensive Security',
+        description: 'Security monitoring, incident response, and threat detection',
+        icon: faLock,
+        color: '#a29bfe'
+    },
+    {
+        title: 'Cyber Physical Systems',
+        description: 'Security of integrated computational and physical processes',
+        icon: faMicrochip,
+        color: '#74b9ff'
+    },
+    {
+        title: 'Sensor Security',
+        description: 'Sensor attack modeling, detection, and mitigation strategies',
+        icon: faSatelliteDish,
+        color: '#55efc4'
+    }
 ];
 
-const cardStyle = {
-        background: "#f8f8f8",
-        borderRadius: 10,
-        boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-        padding: 20,
-        margin: "12px 0"
-};
-
 const Interests = () => (
-        <section id="interests" style={sectionStyle}>
-                <div style={innerStyle}>
-                        <h2 style={{ fontSize: "2em", marginBottom: 32, textAlign: "center" }}>Research Interests</h2>
-                        <div>
-                                {interests.map((interest, idx) => (
-                                        <div key={idx} style={cardStyle}>
-                                                <h3 style={{ margin: "0 0 8px 0" }}>{interest.title}</h3>
-                                                <p style={{ margin: 0 }}>{interest.description}</p>
-                                        </div>
-                                ))}
+    <section id="interests" style={sectionStyle}>
+        <div style={innerStyle}>
+            <h2 className="interests-title">Research Interests</h2>
+            <p className="interests-subtitle">
+                Exploring cutting-edge areas in cybersecurity, from vulnerability research to AI security
+            </p>
+            <div className="interests-grid">
+                {interests.map((interest, index) => (
+                    <div key={index} className="interest-card">
+                        <div className="interest-icon-wrapper" style={{ backgroundColor: interest.color }}>
+                            <FontAwesomeIcon icon={interest.icon} className="interest-icon" />
                         </div>
-                </div>
-                <style>
-                        {`
-                        #interests {
-                                width: 100vw;
-                        }
-                        #interests > div {
-                                width: 100%;
-                                max-width: 1200px;
-                                margin: 0 auto;
-                        }
-                        @media (max-width: 900px) {
-                                #interests > div {
-                                        padding: 32px 12px !important;
-                                }
-                                #interests h2 {
-                                        font-size: 1.5em !important;
-                                }
-                        }
-                        @media (max-width: 600px) {
-                                #interests > div {
-                                        padding: 16px 2vw !important;
-                                }
-                                #interests h2 {
-                                        font-size: 1.2em !important;
-                                }
-                                #interests h3 {
-                                        font-size: 1em !important;
-                                }
-                                #interests div[style] {
-                                        padding: 12px !important;
-                                }
-                        }
-                        @media (max-width: 400px) {
-                                #interests > div {
-                                        padding: 8px 1vw !important;
-                                }
-                                #interests h2 {
-                                        font-size: 1em !important;
-                                }
-                        }
-                        `}
-                </style>
-        </section>
+                        <h3 className="interest-title">{interest.title}</h3>
+                        <p className="interest-description">{interest.description}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+        
+        <style>
+            {`
+            #interests {
+                color: #fff !important;
+            }
+            
+            .interests-title {
+                font-size: 3rem !important;
+                font-weight: 700 !important;
+                text-align: center !important;
+                margin-bottom: 1rem !important;
+                color: #fff !important;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.2) !important;
+            }
+            
+            .interests-subtitle {
+                font-size: 1.2rem !important;
+                text-align: center !important;
+                margin-bottom: 3rem !important;
+                color: rgba(255,255,255,0.9) !important;
+                font-weight: 300 !important;
+            }
+            
+            .interests-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 2rem;
+            }
+            
+            .interest-card {
+                background: rgba(255,255,255,0.95) !important;
+                border-radius: 1.5rem !important;
+                padding: 2rem !important;
+                text-align: center !important;
+                transition: all 0.3s ease !important;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+                backdrop-filter: blur(10px) !important;
+            }
+            
+            .interest-card:hover {
+                transform: translateY(-10px) scale(1.02) !important;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
+            }
+            
+            .interest-icon-wrapper {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1.5rem auto;
+                transition: transform 0.3s ease !important;
+            }
+            
+            .interest-card:hover .interest-icon-wrapper {
+                transform: rotate(360deg) scale(1.1) !important;
+            }
+            
+            .interest-icon {
+                font-size: 2.5rem !important;
+                color: #fff !important;
+            }
+            
+            .interest-title {
+                font-size: 1.4rem !important;
+                font-weight: 600 !important;
+                margin-bottom: 0.8rem !important;
+                color: #2d3436 !important;
+            }
+            
+            .interest-description {
+                font-size: 1rem !important;
+                color: #636e72 !important;
+                line-height: 1.6 !important;
+            }
+            
+            @media (max-width: 900px) {
+                .interests-title {
+                    font-size: 2.5rem !important;
+                }
+                
+                .interests-grid {
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 1.5rem;
+                }
+            }
+            
+            @media (max-width: 600px) {
+                #interests {
+                    padding: 3rem 1rem !important;
+                }
+                
+                .interests-title {
+                    font-size: 2rem !important;
+                }
+                
+                .interests-subtitle {
+                    font-size: 1rem !important;
+                }
+                
+                .interests-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+            `}
+        </style>
+    </section>
 );
 
 export default Interests;
