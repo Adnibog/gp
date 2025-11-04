@@ -1,6 +1,6 @@
 # Gobinda Pandey's Portfolio
 
-This is a professional academic portfolio for Gobinda Pandey, a PhD student in Computing and Information Sciences. It showcases Gobinda's research interests, publications, certifications, and projects.
+This is a professional academic portfolio for Gobinda Pandey, a master's student in Information Assurance at St. Cloud State University. It showcases Gobinda's research interests, publications, certifications, and projects.
 
 ## Getting Started
 
