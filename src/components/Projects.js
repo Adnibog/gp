@@ -1,6 +1,5 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faShieldAlt, faBrain, faHeartbeat, faRobot, faCar } from '@fortawesome/free-solid-svg-icons';
 
 const sectionStyle = {
@@ -27,8 +26,7 @@ const projects = [
         technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Machine Learning'],
         icon: faShieldAlt,
         color: '#ff6b6b',
-        image: '/ids.jpeg',
-        github: null
+        image: '/ids.jpeg'
     },
     {
         title: 'Crotonylation Site Prediction Using Multi-Window Deep Learning',
@@ -37,8 +35,7 @@ const projects = [
         technologies: ['Python', 'PyTorch', 'Deep Learning', 'Bioinformatics', 'Transformers'],
         icon: faBrain,
         color: '#4ecdc4',
-        image: '/kcr.png',
-        github: null
+        image: '/kcr.png'
     },
     {
         title: 'CNN based System for Automatic Number Plate Recognition',
@@ -47,8 +44,7 @@ const projects = [
         technologies: ['Python', 'TensorFlow', 'OpenCV', 'CNN', 'Image Processing'],
         icon: faCar,
         color: '#45b7d1',
-        image: '/ANPR.jpeg',
-        github: 'https://github.com/Adnibog/ANPR'
+        image: '/ANPR.jpeg'
     },
     {
         title: 'Electronic Health Record Management System using RFID',
@@ -57,8 +53,7 @@ const projects = [
         technologies: ['Arduino', 'RFID', 'IoT', 'Database', 'Healthcare IT'],
         icon: faHeartbeat,
         color: '#f9ca24',
-        image: '/smart.jpg',
-        github: null
+        image: '/smart.jpg'
     },
     {
         title: 'Trek Monitoring System',
@@ -67,8 +62,7 @@ const projects = [
         technologies: ['Arduino', 'NodeMCU', 'IoT', 'GPS', 'Real-time Systems'],
         icon: faRobot,
         color: '#fd79a8',
-        image: '/trek.png',
-        github: null
+        image: '/trek.png'
     }
 ];
 
@@ -110,18 +104,6 @@ const Projects = () => (
                                     <span key={i} className="tech-badge">{tech}</span>
                                 ))}
                             </div>
-                            {project.github && (
-                                <div className="project-links">
-                                    <a 
-                                        href={project.github} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer"
-                                        className="project-link"
-                                    >
-                                        <FontAwesomeIcon icon={faGithub} /> View Code
-                                    </a>
-                                </div>
-                            )}
                         </div>
                     </div>
                 ))}
@@ -270,7 +252,6 @@ const Projects = () => (
                 display: flex;
                 flex-wrap: wrap;
                 gap: 0.5rem;
-                margin-bottom: 1.5rem;
             }
             
             .tech-badge {
@@ -285,33 +266,6 @@ const Projects = () => (
             
             .tech-badge:hover {
                 transform: scale(1.05) !important;
-            }
-            
-            .project-links {
-                display: flex;
-                gap: 1rem;
-                margin-top: auto;
-            }
-            
-            .project-link {
-                display: inline-flex !important;
-                align-items: center !important;
-                gap: 0.5rem !important;
-                padding: 0.7rem 1.5rem !important;
-                background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%) !important;
-                color: #fff !important;
-                text-decoration: none !important;
-                border-radius: 25px !important;
-                font-weight: 600 !important;
-                font-size: 0.9rem !important;
-                transition: all 0.3s ease !important;
-                width: 100%;
-                justify-content: center !important;
-            }
-            
-            .project-link:hover {
-                transform: translateY(-2px) !important;
-                box-shadow: 0 5px 15px rgba(106,17,203,0.4) !important;
             }
             
             @media (max-width: 900px) {

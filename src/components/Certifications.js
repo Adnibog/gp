@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCertificate, faAward, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { faBitcoin } from '@fortawesome/free-brands-svg-icons';
+import { faAward } from '@fortawesome/free-solid-svg-icons';
 
 const sectionStyle = {
     width: "100vw",
@@ -25,7 +24,7 @@ const certifications = [
         issuer: 'Chainalysis',
         date: 'November 2024',
         description: 'Acquired practical skills to analyze and trace Bitcoin transactions using the Chainalysis Reactor tool for blockchain forensics and cryptocurrency investigations.',
-        icon: faBitcoin,
+        image: '/chain.png',
         color: '#f7931a'
     },
     {
@@ -33,7 +32,7 @@ const certifications = [
         issuer: 'Chainalysis',
         date: 'October 2024',
         description: 'Gained foundational knowledge of blockchain technology and cryptocurrency ecosystems, and learned to utilize blockchain explorers to investigate Bitcoin transactions.',
-        icon: faBitcoin,
+        image: '/chain.png',
         color: '#627eea'
     },
     {
@@ -41,7 +40,7 @@ const certifications = [
         issuer: 'Coursera',
         date: 'March 2024',
         description: 'Completed four advanced modules: Introduction to Cyber Attacks, Cyber Attack Countermeasures, Real-Time Cyber Threat Detection and Mitigation, and Enterprise and Infrastructure Security.',
-        icon: faAward,
+        image: '/coursera.png',
         color: '#0056d2'
     },
     {
@@ -49,8 +48,16 @@ const certifications = [
         issuer: 'Coursera',
         date: 'December 2023',
         description: 'Developed proficiency in threat analysis, SIEM operations using Splunk, and incident response techniques through hands-on labs and practical exercises.',
-        icon: faCertificate,
+        image: '/coursera.png',
         color: '#4285f4'
+    },
+    {
+        title: 'JPMorgan Chase & Co. Software Engineering Virtual Experience',
+        issuer: 'Forage',
+        date: '2023',
+        description: 'Completed virtual software engineering program focused on financial technology and software development practices.',
+        image: '/forage.png',
+        color: '#0070ba'
     }
 ];
 
@@ -65,8 +72,15 @@ const Certifications = () => (
                 {certifications.map((cert, index) => (
                     <div key={index} className="cert-card">
                         <div className="cert-header">
-                            <div className="cert-icon-wrapper" style={{ backgroundColor: cert.color }}>
-                                <FontAwesomeIcon icon={cert.icon} className="cert-icon" />
+                            <div className="cert-image-wrapper">
+                                <img 
+                                    src={cert.image} 
+                                    alt={cert.issuer}
+                                    className="cert-image"
+                                    onError={(e) => {
+                                        e.target.style.display = 'none';
+                                    }}
+                                />
                             </div>
                             <div className="cert-date">{cert.date}</div>
                         </div>
@@ -133,23 +147,27 @@ const Certifications = () => (
                 margin-bottom: 1.5rem;
             }
             
-            .cert-icon-wrapper {
+            .cert-image-wrapper {
                 width: 60px;
                 height: 60px;
                 border-radius: 15px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background: #fff;
+                padding: 0.5rem;
                 transition: transform 0.3s ease !important;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
             }
             
-            .cert-card:hover .cert-icon-wrapper {
+            .cert-card:hover .cert-image-wrapper {
                 transform: scale(1.1) rotate(5deg) !important;
             }
             
-            .cert-icon {
-                font-size: 2rem !important;
-                color: #fff !important;
+            .cert-image {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
             }
             
             .cert-date {

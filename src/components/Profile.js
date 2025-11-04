@@ -87,7 +87,7 @@ const Profile = () => (
                         rel="noopener noreferrer"
                         className="profile-resume"
                     >
-                        View Resume
+                        View CV
                     </a>
                 </div>
             </div>
