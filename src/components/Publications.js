@@ -59,7 +59,7 @@ const Publications = () => (
         <div style={innerStyle}>
             <h2 className="pub-title">Publications</h2>
             <p className="pub-subtitle">
-                Peer-reviewed research contributions in computer engineering and information systems
+                Research contributions in computer vision, IoT systems, and healthcare technology
             </p>
             <div className="pub-list">
                 {publications.map((pub, index) => (
@@ -85,7 +85,7 @@ const Publications = () => (
                                     rel="noopener noreferrer"
                                     className="pub-link"
                                 >
-                                    View Paper <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                    View Publication <FontAwesomeIcon icon={faExternalLinkAlt} />
                                 </a>
                             </div>
                         </div>
