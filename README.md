@@ -6,11 +6,11 @@ A modern, secure, and responsive portfolio website showcasing professional exper
 
 
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://gobindapandey.com.np/)A modern, responsive portfolio website showcasing my professional experience, projects, publications, certifications, and research interests in cybersecurity and information assurance.This is a professional academic portfolio for Gobinda Pandey, a master's student in Information Assurance at St. Cloud State University. It showcases Gobinda's research interests, publications, certifications, and projects.
+---[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://gobindapandey.com.np/)A modern, responsive portfolio website showcasing my professional experience, projects, publications, certifications, and research interests in cybersecurity and information assurance.This is a professional academic portfolio for Gobinda Pandey, a master's student in Information Assurance at St. Cloud State University. It showcases Gobinda's research interests, publications, certifications, and projects.
 
-[![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
+---[![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
 
-[![Node.js](https://img.shields.io/badge/Node.js-Backend-green)](https://nodejs.org/)
+---[![Node.js](https://img.shields.io/badge/Node.js-Backend-green)](https://nodejs.org/)
 
 
 
