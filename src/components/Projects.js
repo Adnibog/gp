@@ -243,13 +243,13 @@ const Projects = () => (
             .project-description {
                 font-size: 0.95rem !important;
                 color: #636e72 !important;
-                line-height: 1.6 !important;
+                line-height: 1.7 !important;
                 margin-bottom: 1.5rem !important;
                 flex-grow: 1;
                 text-align: justify !important;
                 text-justify: inter-word !important;
                 hyphens: auto !important;
-                word-spacing: 0.05em !important;
+                word-spacing: 0.15em !important;
             }
             
             .project-tech {

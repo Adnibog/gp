@@ -193,11 +193,11 @@ const Profile = () => (
                 color: #555 !important;
                 margin-bottom: 1.5rem !important;
                 font-weight: 400 !important;
-                line-height: 1.6 !important;
+                line-height: 1.7 !important;
                 text-align: justify !important;
                 text-justify: inter-word !important;
                 hyphens: auto !important;
-                word-spacing: 0.05em !important;
+                word-spacing: 0.15em !important;
             }
             
             .profile-resume {
@@ -272,10 +272,10 @@ const Profile = () => (
             .profile-skill-details {
                 font-size: 0.95rem !important;
                 color: #666 !important;
-                line-height: 1.5 !important;
+                line-height: 1.6 !important;
                 text-align: justify !important;
                 text-justify: inter-word !important;
-                word-spacing: 0.05em !important;
+                word-spacing: 0.15em !important;
             }
             
             .profile-edu-card, .profile-exp-card {
@@ -312,11 +312,11 @@ const Profile = () => (
                 font-size: 1rem !important;
                 color: #333 !important;
                 margin-bottom: 0.3rem !important;
-                line-height: 1.6 !important;
+                line-height: 1.7 !important;
                 text-align: justify !important;
                 text-justify: inter-word !important;
                 hyphens: auto !important;
-                word-spacing: 0.05em !important;
+                word-spacing: 0.15em !important;
             }
             
             .profile-edu-loc {
@@ -352,7 +352,7 @@ const Profile = () => (
             
             @media (max-width: 600px) {
                 #profile > div {
-                    padding: 1.5rem 1rem !important;
+                    padding: 2rem 1.5rem !important;
                 }
                 
                 .profile-header {
@@ -360,13 +360,15 @@ const Profile = () => (
                     align-items: center;
                     text-align: center;
                     gap: 1.5rem;
+                    padding-top: 1rem !important;
                 }
                 
                 .profile-img {
-                    width: 140px !important;
-                    height: 140px !important;
+                    width: 150px !important;
+                    height: 150px !important;
                     margin: 0 auto !important;
                     flex-shrink: 0 !important;
+                    display: block !important;
                 }
                 
                 .profile-info {
@@ -378,12 +380,26 @@ const Profile = () => (
                     font-size: 2rem !important;
                 }
                 
+                .profile-desc {
+                    text-align: left !important;
+                    word-spacing: 0.2em !important;
+                    hyphens: auto !important;
+                }
+                
                 .profile-section-title {
                     font-size: 1.5rem !important;
                 }
                 
                 .profile-skills {
                     grid-template-columns: 1fr;
+                }
+                
+                .profile-skill-details,
+                .profile-exp-desc,
+                .profile-edu-degree {
+                    text-align: left !important;
+                    word-spacing: 0.18em !important;
+                    hyphens: auto !important;
                 }
             }
             `}

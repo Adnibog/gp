@@ -154,11 +154,11 @@ const Awards = () => (
             .award-description {
                 font-size: 0.95rem !important;
                 color: #636e72 !important;
-                line-height: 1.6 !important;
+                line-height: 1.7 !important;
                 text-align: justify !important;
                 text-justify: inter-word !important;
                 hyphens: auto !important;
-                word-spacing: 0.05em !important;
+                word-spacing: 0.15em !important;
             }
             
             @media (max-width: 900px) {

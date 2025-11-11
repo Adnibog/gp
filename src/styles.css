@@ -129,7 +129,7 @@ p, ul, ol {
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
-  word-spacing: 0.05em;
+  word-spacing: 0.15em;
   transition: color var(--transition);
 }
 
@@ -582,6 +582,16 @@ a:hover, a:focus {
     --font-size-sm: 13px;
     --section-spacing: var(--space-3);
   }
+  
+  /* Better text spacing on mobile */
+  p, ul, ol {
+    text-align: left !important;
+    word-spacing: 0.18em !important;
+    hyphens: auto !important;
+    -webkit-hyphens: auto !important;
+    line-height: 1.7 !important;
+  }
+  
   .section-content,
   .section-card,
   .projects-grid, .timeline {
