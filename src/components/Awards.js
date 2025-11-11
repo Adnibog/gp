@@ -20,9 +20,9 @@ const innerStyle = {
 
 const awards = [
     {
-        title: 'Research Assistantship Award',
+        title: 'Scholarship/Assistantship for PhD',
         organization: 'Rochester Institute of Technology',
-        description: 'Granted by Rochester Institute of Technology for research and teaching excellence in cybersecurity and systems security domains.',
+        description: 'Received a merit-based scholarship at RIT to pursue a PhD in Computing and Information Sciences.',
         icon: faAward,
         color: '#e74c3c'
     },
@@ -155,6 +155,10 @@ const Awards = () => (
                 font-size: 0.95rem !important;
                 color: #636e72 !important;
                 line-height: 1.6 !important;
+                text-align: justify !important;
+                text-justify: inter-word !important;
+                hyphens: auto !important;
+                word-spacing: 0.05em !important;
             }
             
             @media (max-width: 900px) {

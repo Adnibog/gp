@@ -246,6 +246,10 @@ const Projects = () => (
                 line-height: 1.6 !important;
                 margin-bottom: 1.5rem !important;
                 flex-grow: 1;
+                text-align: justify !important;
+                text-justify: inter-word !important;
+                hyphens: auto !important;
+                word-spacing: 0.05em !important;
             }
             
             .project-tech {

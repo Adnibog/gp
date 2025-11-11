@@ -58,8 +58,8 @@ const experience = [
     {
         title: 'Graduate Research & Teaching Assistant',
         organization: 'Rochester Institute of Technology',
-        description: 'Researched processor timing vulnerabilities and mitigation techniques using data-driven analysis. Developed secure monitoring tools and collaborated on research publications. Supported Side-Channel Analysis coursework, created lab content, and guided students on system security and performance testing.',
-        duration: 'Aug 2024 – May 2025'
+        description: 'Researched timing attack vectors on different microarchitectures. Served as Teaching Assistant for CSEC 622: Side Channel Analysis course. Developed secure monitoring tools and collaborated on research publications in system security and performance testing.',
+        duration: 'Aug 2024 – Dec 2024'
     }
 ];
 
@@ -194,6 +194,10 @@ const Profile = () => (
                 margin-bottom: 1.5rem !important;
                 font-weight: 400 !important;
                 line-height: 1.6 !important;
+                text-align: justify !important;
+                text-justify: inter-word !important;
+                hyphens: auto !important;
+                word-spacing: 0.05em !important;
             }
             
             .profile-resume {
@@ -269,6 +273,9 @@ const Profile = () => (
                 font-size: 0.95rem !important;
                 color: #666 !important;
                 line-height: 1.5 !important;
+                text-align: justify !important;
+                text-justify: inter-word !important;
+                word-spacing: 0.05em !important;
             }
             
             .profile-edu-card, .profile-exp-card {
@@ -306,6 +313,10 @@ const Profile = () => (
                 color: #333 !important;
                 margin-bottom: 0.3rem !important;
                 line-height: 1.6 !important;
+                text-align: justify !important;
+                text-justify: inter-word !important;
+                hyphens: auto !important;
+                word-spacing: 0.05em !important;
             }
             
             .profile-edu-loc {
@@ -341,7 +352,7 @@ const Profile = () => (
             
             @media (max-width: 600px) {
                 #profile > div {
-                    padding: 1.5rem 0.5rem !important;
+                    padding: 1.5rem 1rem !important;
                 }
                 
                 .profile-header {
@@ -352,8 +363,15 @@ const Profile = () => (
                 }
                 
                 .profile-img {
-                    width: 120px !important;
-                    height: 120px !important;
+                    width: 140px !important;
+                    height: 140px !important;
+                    margin: 0 auto !important;
+                    flex-shrink: 0 !important;
+                }
+                
+                .profile-info {
+                    width: 100% !important;
+                    min-width: unset !important;
                 }
                 
                 .profile-name {

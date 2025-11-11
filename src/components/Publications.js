@@ -192,6 +192,10 @@ const Publications = () => (
                 color: #636e72 !important;
                 line-height: 1.6 !important;
                 margin-bottom: 1rem !important;
+                text-align: justify !important;
+                text-justify: inter-word !important;
+                hyphens: auto !important;
+                word-spacing: 0.05em !important;
             }
             
             .pub-links {

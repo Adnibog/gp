@@ -164,6 +164,10 @@ const Interests = () => (
                 font-size: 1rem !important;
                 color: #636e72 !important;
                 line-height: 1.6 !important;
+                text-align: justify !important;
+                text-justify: inter-word !important;
+                hyphens: auto !important;
+                word-spacing: 0.05em !important;
             }
             
             @media (max-width: 900px) {

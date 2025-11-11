@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Favicon</title>
+  <style>
+    body { margin: 0; padding: 20px; font-family: Arial; }
+    canvas { border: 1px solid #ccc; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <h1>Favicon Generator</h1>
+  <canvas id="favicon" width="64" height="64"></canvas>
+  <br>
+  <button onclick="downloadFavicon()">Download favicon.ico</button>
+  
+  <script>
+    const canvas = document.getElementById('favicon');
+    const ctx = canvas.getContext('2d');
+    
+    // Background gradient
+    const gradient = ctx.createLinearGradient(0, 0, 64, 64);
+    gradient.addColorStop(0, '#2da44e');
+    gradient.addColorStop(1, '#0969da');
+    
+    // Draw circle background
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.arc(32, 32, 30, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Draw text "GP"
+    ctx.fillStyle = '#ffffff';
+    ctx.font = 'bold 28px Arial';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('GP', 32, 32);
+    
+    function downloadFavicon() {
+      canvas.toBlob(blob => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'favicon.ico';
+        a.click();
+      });
+    }
+  </script>
+</body>
+</html>

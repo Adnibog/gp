@@ -36,9 +36,33 @@ const certifications = [
         color: '#627eea'
     },
     {
+        title: 'Datacom Cybersecurity Job Simulation',
+        issuer: 'Forage',
+        date: 'February 2024',
+        description: 'Completed hands-on cybersecurity simulation focused on threat detection, security operations, and implementing defensive measures in enterprise environments.',
+        image: '/forage.png',
+        color: '#0070ba'
+    },
+    {
+        title: 'Tata Cybersecurity Security Analyst Job Simulation',
+        issuer: 'Forage',
+        date: 'February 2024',
+        description: 'Gained practical experience in security analysis, vulnerability assessment, and incident response through industry-based cybersecurity scenarios.',
+        image: '/forage.png',
+        color: '#0070ba'
+    },
+    {
+        title: 'JPMorgan Chase & Co. Software Engineering Virtual Experience',
+        issuer: 'Forage',
+        date: 'Feb 2024',
+        description: 'Completed virtual software engineering program focused on financial technology and software development practices.',
+        image: '/forage.png',
+        color: '#0070ba'
+    },
+    {
         title: 'Cybersecurity Specialization',
         issuer: 'Coursera',
-        date: 'March 2024',
+        date: 'October 2023',
         description: 'Completed four advanced modules: Introduction to Cyber Attacks, Cyber Attack Countermeasures, Real-Time Cyber Threat Detection and Mitigation, and Enterprise and Infrastructure Security.',
         image: '/coursera.png',
         color: '#0056d2'
@@ -46,18 +70,18 @@ const certifications = [
     {
         title: 'Google Cybersecurity Professional Certificate',
         issuer: 'Coursera',
-        date: 'December 2023',
+        date: 'October 2023',
         description: 'Developed proficiency in threat analysis, SIEM operations using Splunk, and incident response techniques through hands-on labs and practical exercises.',
         image: '/coursera.png',
         color: '#4285f4'
     },
     {
-        title: 'JPMorgan Chase & Co. Software Engineering Virtual Experience',
-        issuer: 'Forage',
-        date: '2023',
-        description: 'Completed virtual software engineering program focused on financial technology and software development practices.',
-        image: '/forage.png',
-        color: '#0070ba'
+        title: 'Blockchain Specialization',
+        issuer: 'Coursera',
+        date: 'April 2023',
+        description: 'Completed comprehensive program covering blockchain fundamentals, smart contract development, decentralized applications, and blockchain platform architecture.',
+        image: '/coursera.png',
+        color: '#0056d2'
     }
 ];
 
@@ -200,6 +224,10 @@ const Certifications = () => (
                 font-size: 0.95rem !important;
                 color: #636e72 !important;
                 line-height: 1.6 !important;
+                text-align: justify !important;
+                text-justify: inter-word !important;
+                hyphens: auto !important;
+                word-spacing: 0.05em !important;
             }
             
             @media (max-width: 900px) {
