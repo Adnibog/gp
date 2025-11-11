@@ -15,12 +15,10 @@ const Logo = ({ mobile = false }) => {
                     </linearGradient>
                 </defs>
             </svg>
-            <span className="logo-text">Gobinda Pandey</span>
             <style>{`
                 .logo {
                     display: flex;
                     align-items: center;
-                    gap: 0.8rem;
                     cursor: pointer;
                     transition: transform 0.3s ease;
                 }
@@ -29,41 +27,14 @@ const Logo = ({ mobile = false }) => {
                     transform: scale(1.05);
                 }
                 
-                .logo-text {
-                    font-size: 1.2rem;
-                    font-weight: 700;
-                    color: #c9d1d9;
-                    transition: color 0.3s ease;
-                }
-                
-                .logo:hover .logo-text {
-                    background: linear-gradient(135deg, #2da44e 0%, #0969da 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                }
-                
-                .logo-mobile {
-                    gap: 0.5rem;
-                }
-                
-                .logo-mobile svg {
-                    width: 40px;
-                    height: 40px;
-                }
-                
-                .logo-mobile .logo-text {
-                    font-size: 1rem;
+                .logo svg:hover circle {
+                    stroke-width: 4;
                 }
                 
                 @media (max-width: 768px) {
                     .logo svg {
                         width: 40px;
                         height: 40px;
-                    }
-                    
-                    .logo-text {
-                        font-size: 1rem;
                     }
                 }
             `}</style>
