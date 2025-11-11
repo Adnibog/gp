@@ -1,4 +1,4 @@
-# 🌟 Gobinda Pandey - Portfolio Website# 🌟 Personal Portfolio Website# Gobinda Pandey's Portfolio
+# 🌟 Gobinda Pandey - Portfolio Website# 🌟 
 
 
 
