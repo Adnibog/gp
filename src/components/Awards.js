@@ -175,7 +175,7 @@ const Awards = () => (
             
             @media (max-width: 600px) {
                 #awards {
-                    padding: 3rem 1rem !important;
+                    padding: 3rem 1.5rem !important;
                 }
                 
                 .awards-title {

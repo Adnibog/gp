@@ -252,7 +252,7 @@ const Publications = () => (
             
             @media (max-width: 600px) {
                 #publications {
-                    padding: 3rem 1rem !important;
+                    padding: 3rem 1.5rem !important;
                 }
                 
                 .pub-title {

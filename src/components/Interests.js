@@ -184,7 +184,7 @@ const Interests = () => (
             
             @media (max-width: 600px) {
                 #interests {
-                    padding: 3rem 1rem !important;
+                    padding: 3rem 1.5rem !important;
                 }
                 
                 .interests-title {

@@ -15,7 +15,7 @@ const sectionStyle = {
 const innerStyle = {
     width: "100%",
     maxWidth: 1200,
-    padding: "48px 32px",
+    padding: "4rem 2rem",
     boxSizing: "border-box"
 };
 
@@ -236,7 +236,7 @@ const Contact = () => {
                                 }
                                 @media (max-width: 600px) {
                                         #contact > div {
-                                                padding: 16px 2vw !important;
+                                                padding: 3rem 1.5rem !important;
                                         }
                                         #contact .contact-content {
                                                 flex-direction: column !important;

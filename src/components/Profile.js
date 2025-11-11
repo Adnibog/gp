@@ -15,7 +15,7 @@ const sectionStyle = {
 const innerStyle = {
     width: "100%",
     maxWidth: 1200,
-    padding: "3rem 2rem",
+    padding: "4rem 2rem",
     boxSizing: "border-box"
 };
 
@@ -239,7 +239,7 @@ const Profile = () => (
             .profile-skill-card {
                 background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
                 border-radius: 1rem !important;
-                padding: 1.5rem !important;
+                padding: 2rem !important;
                 text-align: center !important;
                 transition: all 0.3s ease !important;
                 border: 1px solid #dee2e6 !important;
@@ -282,7 +282,7 @@ const Profile = () => (
             .profile-edu-card, .profile-exp-card {
                 background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
                 border-radius: 1rem !important;
-                padding: 1.5rem !important;
+                padding: 2rem !important;
                 margin-bottom: 1rem !important;
                 transition: all 0.3s ease !important;
                 border-left: 4px solid #007bff !important;
@@ -353,7 +353,7 @@ const Profile = () => (
             
             @media (max-width: 600px) {
                 #profile > div {
-                    padding: 2rem 1.5rem !important;
+                    padding: 3rem 1.5rem !important;
                 }
                 
                 .profile-header {

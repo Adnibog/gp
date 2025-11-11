@@ -244,7 +244,7 @@ const Certifications = () => (
             
             @media (max-width: 600px) {
                 #certifications {
-                    padding: 3rem 1rem !important;
+                    padding: 3rem 1.5rem !important;
                 }
                 
                 .cert-title {

@@ -290,7 +290,7 @@ const Projects = () => (
             
             @media (max-width: 600px) {
                 #projects {
-                    padding: 3rem 1rem !important;
+                    padding: 3rem 1.5rem !important;
                 }
                 
                 .projects-title {

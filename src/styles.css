@@ -88,10 +88,6 @@ body {
 .App > #certifications,
 .App > #awards,
 .App > #contact {
-  margin-bottom: 3rem;
-}
-
-.App > #profile {
   margin-bottom: 0;
 }
 
