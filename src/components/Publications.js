@@ -3,13 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileAlt, faExternalLinkAlt, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 const sectionStyle = {
-    width: "100vw",
-    background: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    width: "100%",
+    background: "#fff",
     display: "flex",
     justifyContent: "center",
     padding: "4rem 2rem",
-    margin: "0 auto 3rem auto",
-    boxSizing: "border-box"
+    margin: "0",
+    boxSizing: "border-box",
+    overflow: "hidden"
 };
 
 const innerStyle = {

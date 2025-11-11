@@ -4,12 +4,13 @@ import { faPhone, faEnvelope, faMapMarkerAlt, faSpinner, faCheckCircle, faExclam
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const sectionStyle = {
-    width: "100vw",
+    width: "100%",
     background: "#fff",
     display: "flex",
     justifyContent: "center",
-    margin: "0 auto 48px auto",
-    padding: "0"
+    margin: "0",
+    padding: "0",
+    overflow: "hidden"
 };
 const innerStyle = {
     width: "100%",

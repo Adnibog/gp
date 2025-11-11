@@ -3,13 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrophy, faMedal, faAward, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 const sectionStyle = {
-    width: "100vw",
+    width: "100%",
     background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
     display: "flex",
     justifyContent: "center",
     padding: "4rem 2rem",
-    margin: "0 auto 3rem auto",
-    boxSizing: "border-box"
+    margin: "0",
+    boxSizing: "border-box",
+    overflow: "hidden"
 };
 
 const innerStyle = {
